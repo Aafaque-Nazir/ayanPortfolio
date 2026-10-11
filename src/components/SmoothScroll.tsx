@@ -31,7 +31,7 @@ export function scrollToSection(targetId: string) {
     });
   } else {
     const yOffset = -70;
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({ top: y, behavior: "smooth" });
   }
 }
