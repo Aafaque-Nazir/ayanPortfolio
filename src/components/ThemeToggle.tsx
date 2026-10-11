@@ -1,44 +1,21 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState<boolean>(false);
-  const [mounted, setMounted] = useState<boolean>(false);
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => {
-      setMounted(true);
-      const hasDark =
-        document.documentElement.classList.contains("dark") ||
-        document.documentElement.getAttribute("data-theme") === "dark" ||
-        localStorage.getItem("theme") === "dark";
-      setIsDark(hasDark);
-    });
-
-    const handleThemeEvent = () => {
-      const hasDark = document.documentElement.classList.contains("dark");
-      setIsDark(hasDark);
-    };
-
-    window.addEventListener("theme-change", handleThemeEvent);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("theme-change", handleThemeEvent);
-    };
-  }, []);
-
   const toggleTheme = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
 
-    const nextDark = !isDark;
-    setIsDark(nextDark);
-
     const root = document.documentElement;
     const body = document.body;
+    const isCurrentlyDark =
+      root.classList.contains("dark") ||
+      root.getAttribute("data-theme") === "dark" ||
+      (typeof window !== "undefined" && localStorage.getItem("theme") === "dark");
+
+    const nextDark = !isCurrentlyDark;
 
     if (nextDark) {
       root.classList.add("dark");
@@ -62,27 +39,23 @@ export default function ThemeToggle() {
       } catch {}
     }
 
-    // Notify all other toggle instances
-    window.dispatchEvent(new Event("theme-change"));
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new Event("theme-change"));
+    }
   };
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
-      className="w-8 h-8 rounded-md border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:border-zinc-300 dark:hover:border-zinc-700 transition-all cursor-pointer select-none inline-flex items-center justify-center shrink-0"
-      title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
-      aria-label="Toggle Theme"
+      className="relative w-8 h-8 rounded-md border border-zinc-300 dark:border-zinc-700/80 bg-zinc-100/90 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-500 hover:bg-zinc-200/80 dark:hover:bg-zinc-700/80 transition-all duration-200 cursor-pointer select-none inline-flex items-center justify-center shrink-0 shadow-2xs"
+      aria-label="Toggle theme"
+      title="Toggle Dark / Light Mode"
     >
-      {mounted ? (
-        isDark ? (
-          <Sun className="w-4 h-4 text-zinc-200" />
-        ) : (
-          <Moon className="w-4 h-4 text-zinc-700" />
-        )
-      ) : (
-        <span className="w-4 h-4 inline-block" />
-      )}
+      {/* Sun icon is shown in dark mode */}
+      <Sun className="w-4 h-4 text-zinc-100 hidden dark:block transition-transform duration-200 hover:rotate-45" />
+      {/* Moon icon is shown in light mode */}
+      <Moon className="w-4 h-4 text-zinc-800 block dark:hidden transition-transform duration-200 hover:-rotate-12" />
     </button>
   );
 }

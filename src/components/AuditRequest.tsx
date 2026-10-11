@@ -64,19 +64,19 @@ export default function AuditRequest() {
   };
 
   return (
-    <section id="contact" className="py-14 md:py-20 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#09090B] scroll-mt-14 transition-colors duration-200">
+    <section id="contact" className="py-14 md:py-20 border-b border-zinc-200 dark:border-zinc-700/80 bg-white dark:bg-[#09090B] scroll-mt-14 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-5 border-b border-zinc-200 dark:border-zinc-800">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-5 border-b border-zinc-200 dark:border-zinc-700/80">
           <div>
-            <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-1.5">
+            <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-600 dark:text-zinc-300 font-semibold mb-1.5">
               Contact
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
               Get a Free Website Audit
             </h2>
           </div>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 font-mono mt-2 sm:mt-0">
+          <p className="text-xs text-zinc-600 dark:text-zinc-300 font-mono mt-2 sm:mt-0 font-medium">
             Send your website link. I will review it and reply within 24 hours.
           </p>
         </div>
@@ -84,45 +84,45 @@ export default function AuditRequest() {
         {/* Compact Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left: Direct Contact & Info */}
-          <div className="lg:col-span-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 p-6 md:p-7 space-y-6 transition-colors duration-200">
+          <div className="lg:col-span-5 rounded-2xl border border-zinc-300 dark:border-zinc-700 bg-zinc-50/90 dark:bg-zinc-900/90 p-6 md:p-7 space-y-6 transition-colors duration-200 shadow-xs">
             <div>
-              <h3 className="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-1.5">
+              <h3 className="text-lg font-bold tracking-tight text-zinc-950 dark:text-zinc-50 mb-1.5">
                 Work Directly With Me
               </h3>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-700 dark:text-zinc-200 leading-relaxed font-medium">
                 Whether you need to fix your Google rankings or want someone reliable to manage your social media, you talk directly with me.
               </p>
             </div>
 
-            <div className="p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-2">
-              <div className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 uppercase">
+            <div className="p-4 bg-white dark:bg-zinc-950 rounded-xl border border-zinc-300 dark:border-zinc-700 space-y-2 shadow-2xs">
+              <div className="text-[10px] font-mono text-zinc-600 dark:text-zinc-300 uppercase font-semibold">
                 My Email Address:
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className="font-mono text-xs text-zinc-900 dark:text-zinc-100 font-semibold truncate">
+                <span className="font-mono text-xs text-zinc-950 dark:text-zinc-50 font-bold truncate">
                   {directEmail}
                 </span>
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-1.5 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 active:scale-90 transition-all duration-150 shrink-0 cursor-pointer"
+                  className="p-1.5 rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 active:scale-90 transition-all duration-150 shrink-0 cursor-pointer"
                   title="Copy Email Address"
                 >
                   {copiedEmail ? (
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                    <Check className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
                   ) : (
                     <Copy className="w-4 h-4" />
                   )}
                 </button>
               </div>
               {copiedEmail && (
-                <div className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 animate-fade-slide-up">
+                <div className="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-semibold animate-fade-slide-up">
                   ✓ Copied to clipboard!
                 </div>
               )}
             </div>
 
-            <div className="space-y-2.5 text-xs font-mono text-zinc-500 dark:text-zinc-400 pt-3 border-t border-zinc-200 dark:border-zinc-800">
+            <div className="space-y-2.5 text-xs font-mono text-zinc-700 dark:text-zinc-300 pt-3 border-t border-zinc-200 dark:border-zinc-700/80 font-medium">
               <p>• 100% free review of your website and rankings.</p>
               <p>• Honest advice with no sales pressure.</p>
               <p>• Clear steps you can take right away.</p>
@@ -130,25 +130,25 @@ export default function AuditRequest() {
           </div>
 
           {/* Right: Minimalist Form */}
-          <div className="lg:col-span-7 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6 md:p-8 transition-colors duration-200">
+          <div className="lg:col-span-7 rounded-2xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900/90 p-6 md:p-8 transition-colors duration-200 shadow-xs">
             {formSubmitted ? (
               <div className="py-10 text-center space-y-4">
                 <div className="w-12 h-12 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-900 dark:text-zinc-100 mx-auto flex items-center justify-center">
-                  <Check className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                  <Check className="w-6 h-6 text-emerald-700 dark:text-emerald-400" />
                 </div>
-                <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                <h3 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
                   Message Prepared
                 </h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-sm mx-auto leading-relaxed">
+                <p className="text-xs text-zinc-700 dark:text-zinc-200 max-w-sm mx-auto leading-relaxed font-medium">
                   Your email client has opened with your details. You can also email directly to{" "}
-                  <span className="font-mono font-semibold text-zinc-900 dark:text-zinc-100">
+                  <span className="font-mono font-bold text-zinc-950 dark:text-zinc-50">
                     {directEmail}
                   </span>.
                 </p>
                 <button
                   type="button"
                   onClick={() => setFormSubmitted(false)}
-                  className="mt-2 px-4 py-2 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-semibold cursor-pointer"
+                  className="mt-2 px-4 py-2 rounded-lg bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold cursor-pointer shadow-xs"
                 >
                   Send Another Message
                 </button>
@@ -168,7 +168,7 @@ export default function AuditRequest() {
                 </div>
 
                 {errorMessage && (
-                  <div className="p-3 bg-red-50 dark:bg-red-950/30 rounded-lg border border-red-200 dark:border-red-900 text-xs font-mono text-red-600 dark:text-red-400 flex items-center gap-2">
+                  <div className="p-3 bg-red-50 dark:bg-red-950/40 rounded-lg border border-red-300 dark:border-red-800 text-xs font-mono text-red-700 dark:text-red-300 flex items-center gap-2 font-medium">
                     <AlertCircle className="w-4 h-4 shrink-0" />
                     <span>{errorMessage}</span>
                   </div>
@@ -178,7 +178,7 @@ export default function AuditRequest() {
                   <div>
                     <label
                       htmlFor="form-name"
-                      className="block text-[11px] font-mono uppercase text-zinc-900 dark:text-zinc-100 font-semibold mb-1.5"
+                      className="block text-[11px] font-mono uppercase text-zinc-950 dark:text-zinc-50 font-bold mb-1.5"
                     >
                       Your Name *
                     </label>
@@ -191,14 +191,14 @@ export default function AuditRequest() {
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-zinc-900 dark:focus:border-zinc-100 focus:ring-1 focus:ring-zinc-900/10 dark:focus:ring-zinc-100/20 focus:outline-none transition-all duration-150"
+                      className="w-full px-3.5 py-2.5 bg-zinc-50/80 dark:bg-zinc-950 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs text-zinc-950 dark:text-zinc-50 placeholder:text-zinc-500 dark:placeholder:text-zinc-400 focus:border-zinc-950 dark:focus:border-zinc-200 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-zinc-950/20 dark:focus:ring-zinc-200/30 focus:outline-none transition-all duration-150 font-medium"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="form-email"
-                      className="block text-[11px] font-mono uppercase text-zinc-900 dark:text-zinc-100 font-semibold mb-1.5"
+                      className="block text-[11px] font-mono uppercase text-zinc-950 dark:text-zinc-50 font-bold mb-1.5"
                     >
                       Your Email *
                     </label>
@@ -211,7 +211,7 @@ export default function AuditRequest() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-zinc-900 dark:focus:border-zinc-100 focus:ring-1 focus:ring-zinc-900/10 dark:focus:ring-zinc-100/20 focus:outline-none transition-all duration-150"
+                      className="w-full px-3.5 py-2.5 bg-zinc-50/80 dark:bg-zinc-950 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs text-zinc-950 dark:text-zinc-50 placeholder:text-zinc-500 dark:placeholder:text-zinc-400 focus:border-zinc-950 dark:focus:border-zinc-200 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-zinc-950/20 dark:focus:ring-zinc-200/30 focus:outline-none transition-all duration-150 font-medium"
                     />
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function AuditRequest() {
                   <div>
                     <label
                       htmlFor="form-domain"
-                      className="block text-[11px] font-mono uppercase text-zinc-900 dark:text-zinc-100 font-semibold mb-1.5"
+                      className="block text-[11px] font-mono uppercase text-zinc-950 dark:text-zinc-50 font-bold mb-1.5"
                     >
                       Website or Social Link *
                     </label>
@@ -233,14 +233,14 @@ export default function AuditRequest() {
                       onChange={(e) =>
                         setFormData({ ...formData, domainUrl: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-zinc-900 dark:focus:border-zinc-100 focus:ring-1 focus:ring-zinc-900/10 dark:focus:ring-zinc-100/20 focus:outline-none transition-all duration-150"
+                      className="w-full px-3.5 py-2.5 bg-zinc-50/80 dark:bg-zinc-950 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs text-zinc-950 dark:text-zinc-50 placeholder:text-zinc-500 dark:placeholder:text-zinc-400 focus:border-zinc-950 dark:focus:border-zinc-200 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-zinc-950/20 dark:focus:ring-zinc-200/30 focus:outline-none transition-all duration-150 font-medium"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="form-service"
-                      className="block text-[11px] font-mono uppercase text-zinc-900 dark:text-zinc-100 font-semibold mb-1.5"
+                      className="block text-[11px] font-mono uppercase text-zinc-950 dark:text-zinc-50 font-bold mb-1.5"
                     >
                       What Do You Need Help With?
                     </label>
@@ -250,7 +250,7 @@ export default function AuditRequest() {
                       onChange={(e) =>
                         setFormData({ ...formData, serviceType: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 focus:border-zinc-900 dark:focus:border-zinc-100 focus:ring-1 focus:ring-zinc-900/10 dark:focus:ring-zinc-100/20 focus:outline-none transition-all duration-150 cursor-pointer"
+                      className="w-full px-3.5 py-2.5 bg-zinc-50/80 dark:bg-zinc-950 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs text-zinc-950 dark:text-zinc-50 focus:border-zinc-950 dark:focus:border-zinc-200 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-zinc-950/20 dark:focus:ring-zinc-200/30 focus:outline-none transition-all duration-150 cursor-pointer font-medium"
                     >
                       <option value="Google SEO Growth">Google SEO (More Website Visitors)</option>
                       <option value="Full Social Media Management">
@@ -269,7 +269,7 @@ export default function AuditRequest() {
                 <div>
                   <label
                     htmlFor="form-notes"
-                    className="block text-[11px] font-mono uppercase text-zinc-900 dark:text-zinc-100 font-semibold mb-1.5"
+                    className="block text-[11px] font-mono uppercase text-zinc-950 dark:text-zinc-50 font-bold mb-1.5"
                   >
                     Quick Details (What are you struggling with?)
                   </label>
@@ -281,13 +281,13 @@ export default function AuditRequest() {
                     onChange={(e) =>
                       setFormData({ ...formData, notes: e.target.value })
                     }
-                    className="w-full px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 resize-none focus:border-zinc-900 dark:focus:border-zinc-100 focus:ring-1 focus:ring-zinc-900/10 dark:focus:ring-zinc-100/20 focus:outline-none transition-all duration-150"
+                    className="w-full px-3.5 py-2.5 bg-zinc-50/80 dark:bg-zinc-950 rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs text-zinc-950 dark:text-zinc-50 placeholder:text-zinc-500 dark:placeholder:text-zinc-400 resize-none focus:border-zinc-950 dark:focus:border-zinc-200 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-zinc-950/20 dark:focus:ring-zinc-200/30 focus:outline-none transition-all duration-150 font-medium"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-semibold hover:bg-zinc-800 dark:hover:bg-white active:scale-[0.98] transition-all duration-200 shadow-xs cursor-pointer group"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-zinc-800 dark:hover:bg-white active:scale-[0.98] transition-all duration-200 shadow-xs cursor-pointer group"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>Send Audit Request</span>

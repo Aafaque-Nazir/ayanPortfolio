@@ -8,29 +8,29 @@
   --bg-surface-elevated: #FAFAFA;
   
   --ink-primary: #09090B;
-  --ink-secondary: #52525B;
-  --ink-muted: #71717A;
+  --ink-secondary: #3F3F46;
+  --ink-muted: #52525B;
   
-  --border-subtle: #E4E4E7;
+  --border-subtle: #D4D4D8;
   --border-dark: #09090B;
   
   --accent-primary: #09090B;
-  --accent-emerald: #10B981;
+  --accent-emerald: #059669;
   
   color-scheme: light;
 }
 
 html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
   --bg-canvas: #09090B;
-  --bg-surface: #121214;
-  --bg-surface-muted: #18181B;
-  --bg-surface-elevated: #202024;
+  --bg-surface: #141417;
+  --bg-surface-muted: #1A1A1E;
+  --bg-surface-elevated: #242429;
   
   --ink-primary: #FAFAFA;
-  --ink-secondary: #A1A1AA;
-  --ink-muted: #71717A;
+  --ink-secondary: #E4E4E7;
+  --ink-muted: #A1A1AA;
   
-  --border-subtle: #27272A;
+  --border-subtle: #3F3F46;
   --border-dark: #FAFAFA;
   
   --accent-primary: #FAFAFA;
@@ -83,11 +83,13 @@ html.dark ::selection {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: #09090B;
+  box-shadow: 0 0 0 1px #09090B;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 html.dark input:focus, html.dark textarea:focus, html.dark select:focus {
   border-color: #FAFAFA;
+  box-shadow: 0 0 0 1px #FAFAFA;
 }
 
 /* Range Slider Micro-Interactions */
