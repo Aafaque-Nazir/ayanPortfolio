@@ -52,18 +52,18 @@ export default function Hero() {
 
             <div className="space-y-3.5 font-mono text-xs">
               <div className="flex items-baseline justify-between py-1.5 px-2 -mx-2 rounded border-b border-zinc-200/80 dark:border-zinc-800 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/80 transition-colors duration-150">
-                <span className="text-zinc-600 dark:text-zinc-300 font-medium">01 Monthly Google Visits</span>
-                <span className="text-zinc-950 dark:text-zinc-50 font-bold text-sm">580,000 / mo</span>
+                <span className="text-zinc-600 dark:text-zinc-300 font-medium">01 Local Google Map Actions</span>
+                <span className="text-zinc-950 dark:text-zinc-50 font-bold text-sm">3,723+ Verified</span>
               </div>
 
               <div className="flex items-baseline justify-between py-1.5 px-2 -mx-2 rounded border-b border-zinc-200/80 dark:border-zinc-800 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/80 transition-colors duration-150">
-                <span className="text-zinc-600 dark:text-zinc-300 font-medium">02 Social Media Views</span>
-                <span className="text-zinc-950 dark:text-zinc-50 font-bold text-sm">4.2M+ Views</span>
+                <span className="text-zinc-600 dark:text-zinc-300 font-medium">02 24-Hour Search Spike</span>
+                <span className="text-zinc-950 dark:text-zinc-50 font-bold text-sm">20,200 Clicks / 24h</span>
               </div>
 
               <div className="flex items-baseline justify-between py-1.5 px-2 -mx-2 rounded border-b border-zinc-200/80 dark:border-zinc-800 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/80 transition-colors duration-150">
-                <span className="text-zinc-600 dark:text-zinc-300 font-medium">03 Customer Inbound Leads</span>
-                <span className="text-zinc-950 dark:text-zinc-50 font-bold text-sm">2.4x Increase</span>
+                <span className="text-zinc-600 dark:text-zinc-300 font-medium">03 Google Search Impressions</span>
+                <span className="text-zinc-950 dark:text-zinc-50 font-bold text-sm">506,000+ Impressions</span>
               </div>
 
               <div className="flex items-baseline justify-between py-1.5 px-2 -mx-2 rounded hover:bg-zinc-200/50 dark:hover:bg-zinc-800/80 transition-colors duration-150">

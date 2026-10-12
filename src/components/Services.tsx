@@ -57,7 +57,7 @@ export default function Services() {
                     What&apos;s Included:
                   </div>
                   <ul className="space-y-2.5">
-                    {service.deliverables.map((item, idx) => (
+                    {service.deliverables.map((item: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-2 text-xs text-zinc-800 dark:text-zinc-200">
                         <Check className="w-3.5 h-3.5 text-emerald-700 dark:text-emerald-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200" />
                         <span>{item}</span>

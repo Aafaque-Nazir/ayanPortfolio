@@ -47,7 +47,7 @@ export default function Playbook() {
                 </p>
 
                 <ul className="space-y-2.5 border-t border-zinc-200 dark:border-zinc-700/80 pt-3.5">
-                  {step.tactics.map((tactic, tIdx) => (
+                  {step.tactics.map((tactic: string, tIdx: number) => (
                     <li key={tIdx} className="flex items-start gap-2 text-xs text-zinc-800 dark:text-zinc-200">
                       <Check className="w-3.5 h-3.5 text-emerald-700 dark:text-emerald-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200" />
                       <span>{tactic}</span>
