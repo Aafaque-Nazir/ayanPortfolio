@@ -25,10 +25,17 @@ export interface CaseStudyProofExplainer {
   highlights: ProofHighlight[];
 }
 
+export interface CaseMilestone {
+  period: string;
+  value: string;
+  detail: string;
+}
+
 export interface VerifiedProof {
   id: string;
   title: string;
   clientOrDomain: string;
+  clientCategory?: string;
   location?: string;
   platform: "Google Business Profile" | "Google Search Console" | "Medium Platform";
   timeframe: string;
@@ -39,6 +46,10 @@ export interface VerifiedProof {
   summary: string;
   plainEnglishImpact?: string;
   externalLink?: string;
+  challenge?: string;
+  strategy?: string[];
+  milestones?: CaseMilestone[];
+  commercialTakeaway?: string;
 }
 
 export interface CaseStudy {
@@ -90,61 +101,6 @@ export interface PlaybookStep {
 }
 
 export const CASE_STUDIES: CaseStudy[] = [
-  {
-    id: "woodstack-usa",
-    clientName: "WOODstack | Brownsville",
-    clientCategory: "Retail & Streetwear Store",
-    location: "Brooklyn, New York, USA",
-    title: "Generated 3,723 Local Profile Interactions & 1,255 In-Store Direction Requests",
-    discipline: "Google Business Profile",
-    timeline: "5 Months (Mar – Jul 2026)",
-    headlineMetric: "3,723",
-    headlineMetricLabel: "Google Profile Interactions",
-    summary:
-      "WOODstack is a premier footwear and streetwear retail chain in New York. We overhauled their Brownsville Google Business Profile, dominating Brooklyn local map packs to drive physical foot traffic, calls, and website visits.",
-    challenge:
-      "Stiff retail competition in Brooklyn made it hard for the Brownsville store to capture shoppers looking for sneakers and streetwear on Google Maps, resulting in underutilized local foot traffic.",
-    solution:
-      "Targeted high-intent local footwear keywords, synchronized store geo-tags, maintained regular product showcases, and accelerated verified customer reviews to secure top-3 Google 3-Pack placement.",
-    results: [
-      { label: "Total Profile Interactions", value: "3,723 Verified" },
-      { label: "Store Direction Requests", value: "1,255 Customers" },
-      { label: "Direct Phone Calls", value: "717 Phone Inquiries" },
-      { label: "Website Clicks", value: "1,255 Inbound Visits" },
-    ],
-    graphData: [
-      { month: "Mar", traffic: 1400, milestone: "1,400 Interactions (Peak) - Initial Local SEO Surge & Spring Drop" },
-      { month: "Apr", traffic: 400, milestone: "400 Interactions - Sustained baseline traffic and review campaign" },
-      { month: "May", traffic: 650, milestone: "650 Interactions - Summer apparel showcase and local rank climb" },
-      { month: "Jun", traffic: 685, milestone: "685 Interactions - Top-3 Google 3-Pack visibility in Brooklyn" },
-      { month: "Jul", traffic: 450, milestone: "450 Interactions - Steady ongoing foot-traffic conversion" },
-    ],
-    monthlyTable: [
-      { month: "March 2026", interactions: "~1,400 (Peak)", phoneCalls: "280", bookings: "140", directions: "490", websiteClicks: "490", milestone: "Spring footwear launch & initial optimization surge" },
-      { month: "April 2026", interactions: "~400", phoneCalls: "80", bookings: "40", directions: "140", websiteClicks: "140", milestone: "Review generation & ongoing citation sync" },
-      { month: "May 2026", interactions: "~650", phoneCalls: "130", bookings: "65", directions: "227", websiteClicks: "228", milestone: "Summer collection & localized product schema" },
-      { month: "June 2026", interactions: "685 (Specific)", phoneCalls: "137", bookings: "68", directions: "240", websiteClicks: "240", milestone: "Consistent top-3 Google Maps ranking in Brooklyn" },
-      { month: "July 2026", interactions: "~450", phoneCalls: "90", bookings: "45", directions: "158", websiteClicks: "157", milestone: "Steady in-store foot traffic conversion" },
-      { month: "5-Month Total", interactions: "3,723 Total", phoneCalls: "~717", bookings: "~358", directions: "~1,255", websiteClicks: "~1,255", milestone: "3,723 Verified Google Business Profile Interactions" },
-    ],
-    screenshotUrl: "/case-studies/woodstack-usa-gmb.png",
-    screenshotCaption: "Verified Google Business Profile Performance Dashboard: 3,723 Total Interactions (WOODstack | Brownsville, Brooklyn, NY)",
-    proofExplainer: {
-      dashboardUrl: "business.google.com/performance/woodstack-brownsville",
-      platformName: "Google Business Profile",
-      whatItShows: "Official Google Maps & Local Search performance tracking customer foot-traffic and calls for the Brooklyn store.",
-      plainEnglishMeaning: "When local shoppers in Brooklyn search for sneakers, streetwear, or athletic footwear, Google places WOODstack at the very top. 3,723 people took immediate action to visit or call.",
-      whyItMatters: "Every interaction is a real person with immediate purchase intent — not empty bot clicks or wasted ad dollars.",
-      highlights: [
-        { label: "1,255 In-Store Visits", value: "1,255", explanation: "Shoppers clicked driving or walking directions in Google Maps to visit the store in person." },
-        { label: "717 Phone Inquiries", value: "717", explanation: "Customers tapped the call button directly from search to check shoe sizes and availability." },
-        { label: "1,255 Website Visits", value: "1,255", explanation: "High-intent buyers clicked through to browse the online catalog before visiting." },
-        { label: "1,400 Peak Month", value: "1,400", explanation: "Generated 1,400 high-intent customer actions during the peak seasonal spring launch." },
-      ],
-    },
-    keyTakeaway:
-      "Dominating Google Maps in a dense metro area like Brooklyn converted search queries directly into in-store foot traffic and phone calls.",
-  },
   {
     id: "phonebuzz-goldcoast",
     clientName: "Phone Buzz - Repair Centre",
@@ -299,137 +255,166 @@ export const CASE_STUDIES: CaseStudy[] = [
 
 export const VERIFIED_PROOFS: VerifiedProof[] = [
   {
-    id: "proof-woodstack",
-    title: "WOODstack | Brownsville - USA",
-    clientOrDomain: "woodstack.com",
-    location: "Brooklyn, New York, USA",
-    platform: "Google Business Profile",
-    timeframe: "March – July 2026 (5 Months)",
-    screenshotUrl: "/case-studies/woodstack-usa-gmb.png",
-    headlineMetric: "3,723",
-    headlineMetricLabel: "Total Profile Interactions",
-    secondaryMetrics: [
-      { label: "Store Directions", value: "1,255" },
-      { label: "Phone Calls", value: "717" },
-      { label: "Website Clicks", value: "1,255" },
-      { label: "Peak Month", value: "1,400" },
-    ],
-    summary: "Dominated Brooklyn local 3-pack map rankings for footwear retail, driving 1,255 in-store navigation requests and 717 phone inquiries directly to the store.",
-    plainEnglishImpact: "1,255 shoppers navigated directly to the Brooklyn retail store; 717 customers called directly to buy.",
-  },
-  {
     id: "proof-phonebuzz",
-    title: "Phone Buzz - Repair Centre",
+    title: "Phone Buzz — Phone & Tablet Repair",
     clientOrDomain: "phonebuzz.com.au",
-    location: "Gold Coast, Queensland, Australia",
+    clientCategory: "Phone Repair Centre",
+    location: "Gold Coast, Australia",
     platform: "Google Business Profile",
-    timeframe: "March – August 2026 (6 Months)",
+    timeframe: "6 Months (Mar – Aug 2026)",
     screenshotUrl: "/case-studies/phonebuzz-goldcoast-gmb.png",
     headlineMetric: "973",
-    headlineMetricLabel: "High-Intent Repair Leads",
+    headlineMetricLabel: "Urgent Repair Leads",
     secondaryMetrics: [
-      { label: "Store Directions", value: "317" },
+      { label: "Store Walk-Ins", value: "317" },
       { label: "Direct Calls", value: "216" },
       { label: "Website Quotes", value: "321" },
-      { label: "Peak Month", value: "208" },
+      { label: "Map Rank", value: "Top 3" },
     ],
-    summary: "Ranked in the top 3 of Google Maps across Benowa and Gold Coast for urgent phone & tablet repairs, turning emergency searches into paying customers.",
-    plainEnglishImpact: "Captured 973 urgent repair jobs (cracked screens & battery replacements) when customers broke their phones.",
+    summary: "Ranked in Google Maps top 3 for urgent phone and screen repairs, capturing 973 high-intent customer leads at their moment of need.",
+    plainEnglishImpact: "Captured 973 urgent repair jobs (cracked screens & battery swaps) right when customers broke their devices.",
+    challenge: "People with broken screens call the first 3 shops on Google Maps. Phone Buzz was buried below competitors and missing emergency repair jobs.",
+    strategy: [
+      "Overhauled Google service categories for cracked screens and battery swaps",
+      "Targeted nearby suburbs across the Gold Coast shopping radius",
+      "Systematized verified reviews to boost local trust and map rank",
+    ],
+    commercialTakeaway: "Captured 973 urgent local repair jobs, driving 317 customers directly to the shopping centre counter.",
   },
   {
     id: "proof-trendingprompt",
-    title: "TrendingPrompt.in - Viral SEO",
+    title: "TrendingPrompt.in — Viral Search Spike",
     clientOrDomain: "trendingprompt.in",
-    location: "Global Search Volume",
+    clientCategory: "AI Prompts Directory",
+    location: "Global Search",
     platform: "Google Search Console",
-    timeframe: "Single 24-Hour Performance",
+    timeframe: "Single 24-Hour Spike",
     screenshotUrl: "/case-studies/trendingprompt-viral-gsc.jpg",
     headlineMetric: "20.2K",
     headlineMetricLabel: "Clicks in 24 Hours",
     secondaryMetrics: [
       { label: "Impressions", value: "152,000" },
-      { label: "Average CTR", value: "13.3%" },
-      { label: "Avg Position", value: "5.x" },
-      { label: "Top Pages", value: "Top 3 Rank" },
+      { label: "Click Rate (CTR)", value: "13.3%" },
+      { label: "Avg Position", value: "Top 5" },
+      { label: "Ad Spend", value: "$0" },
     ],
-    summary: "Capitalized on breakout viral AI search demand with CTR-optimized snippets, delivering 20,200 organic clicks in a single day at a 13.3% CTR.",
-    plainEnglishImpact: "20,200 individual searchers visited the site in 24 hours at a 13.3% click rate with $0 spent on ads.",
+    summary: "Captured a viral AI search trend with fast indexation and high-CTR title tags, generating 20,200 Google clicks in a single day.",
+    plainEnglishImpact: "20,200 people clicked from Google to the website in one day at a 13.3% click rate — completely free.",
+    challenge: "Viral search terms surge and disappear quickly. Slow SEO cycles miss the traffic entirely unless pages rank within hours.",
+    strategy: [
+      "Built lightweight pages with automated FAQ and image schema",
+      "Pushed instant indexing requests to Google within hours of the trend",
+      "Wrote high-CTR title tags that won clicks over bigger sites",
+    ],
+    commercialTakeaway: "Brought in 20,200 free Google clicks in 24 hours, peaking at 1,650 clicks per hour with zero ad cost.",
   },
   {
     id: "proof-getcito",
-    title: "Getcito.com - B2B Visibility",
+    title: "Getcito.com — B2B Software Visibility",
     clientOrDomain: "getcito.com",
-    location: "Global Software Search",
+    clientCategory: "B2B SaaS Platform",
+    location: "Global B2B Market",
     platform: "Google Search Console",
-    timeframe: "3 Months Performance",
+    timeframe: "3 Months",
     screenshotUrl: "/case-studies/getcito-gsc-performance.jpg",
     headlineMetric: "506K",
-    headlineMetricLabel: "Total Search Impressions",
+    headlineMetricLabel: "Search Impressions",
     secondaryMetrics: [
-      { label: "Total Clicks", value: "1,960" },
-      { label: "Average CTR", value: "0.4%" },
+      { label: "Organic Clicks", value: "1,960" },
       { label: "Avg Position", value: "12.1" },
-      { label: "Crawl Health", value: "100% Clean" },
+      { label: "Crawl Health", value: "100%" },
+      { label: "Ad Spend", value: "$0" },
     ],
-    summary: "Restructured site hierarchy and content clusters for B2B SaaS software, scaling search visibility past half a million organic impressions.",
-    plainEnglishImpact: "Google showed this software over 506,000 times to active buyers, generating 1,960 high-value leads.",
+    summary: "Fixed technical crawl bottlenecks and organized pages into clear topic hubs, scaling search impressions past half a million.",
+    plainEnglishImpact: "Google showed this software over 506,000 times to corporate buyers, generating 1,960 high-intent inquiries.",
+    challenge: "The software platform had crawl depth issues and duplicate topics, leaving high-value commercial pages buried past page 4 of Google.",
+    strategy: [
+      "Fixed technical crawl errors and cleaned up URL structure",
+      "Grouped content into clear topic hubs with smart internal links",
+      "Targeted commercial software terms used by business decision-makers",
+    ],
+    commercialTakeaway: "Generated 506,000 search impressions and 1,960 B2B inquiries without paying for recurring LinkedIn or Google ads.",
   },
   {
     id: "proof-lixo",
-    title: "Lixo.in - E-Commerce Growth",
+    title: "Lixo.in — E-Commerce Category SEO",
     clientOrDomain: "lixo.in",
+    clientCategory: "E-Commerce & Retail",
     location: "E-Commerce Market",
     platform: "Google Search Console",
-    timeframe: "3 Months Performance",
+    timeframe: "3 Months",
     screenshotUrl: "/case-studies/lixo-ecommerce-gsc.jpg",
     headlineMetric: "4.12K",
     headlineMetricLabel: "Organic Google Clicks",
     secondaryMetrics: [
       { label: "Impressions", value: "346,000" },
-      { label: "Average CTR", value: "1.2%" },
       { label: "Avg Position", value: "7.6 (Page 1)" },
-      { label: "Commercial Clicks", value: "4,120+" },
+      { label: "Click Rate", value: "1.2%" },
+      { label: "Ad Spend", value: "$0" },
     ],
-    summary: "Optimized category hierarchies, faceted filters, and transactional metadata, achieving an average position of 7.6 on page 1 of Google.",
-    plainEnglishImpact: "Ranked on Page 1 of Google (Average Position 7.6), turning search volume into 4,120 paying shoppers.",
+    summary: "Structured clean product category hierarchies and transactional snippets, ranking on Page 1 of Google to drive 4,120+ organic shoppers.",
+    plainEnglishImpact: "Ranked on Google Page 1 (average position 7.6), sending 4,120 shoppers straight to product pages.",
+    challenge: "High competition in e-commerce left product categories invisible on Google, forcing heavy reliance on paid ads.",
+    strategy: [
+      "Organized clean category navigation and fixed duplicate filter URLs",
+      "Added structured product schema for rich search snippets",
+      "Optimized category copy for high-intent shopping queries",
+    ],
+    commercialTakeaway: "Achieved average position 7.6 on Page 1 of Google, driving 4,120+ shoppers directly to product checkout pages.",
   },
   {
     id: "proof-newsite",
-    title: "New Domain - 25-Day Fast Rank",
+    title: "New Domain — Fast Index & Rank",
     clientOrDomain: "Fresh Domain Launch",
-    location: "New Website Launch",
+    clientCategory: "New Site Launch",
+    location: "Global Search",
     platform: "Google Search Console",
-    timeframe: "25 Days (Aug 20 – Sep 13, 2026)",
+    timeframe: "First 25 Days",
     screenshotUrl: "/case-studies/new-site-25days-gsc.png",
     headlineMetric: "527",
     headlineMetricLabel: "Clicks in First 25 Days",
     secondaryMetrics: [
       { label: "Impressions", value: "5,740" },
-      { label: "Average CTR", value: "9.2%" },
-      { label: "Avg Position", value: "27.1" },
+      { label: "Click Rate (CTR)", value: "9.2%" },
       { label: "Index Speed", value: "< 24 Hours" },
+      { label: "Avg Position", value: "27.1" },
     ],
-    summary: "Bypassed standard sandbox delays on a brand new domain: generated 527 organic clicks and 5.74K impressions within just 25 days of going live.",
-    plainEnglishImpact: "Bypassed typical 6-month Google sandbox delays, earning 527 clicks and top-30 rank in under 4 weeks.",
+    summary: "Bypassed typical 6-month Google sandbox delays on a brand-new website, generating 527 organic clicks within 25 days of launch.",
+    plainEnglishImpact: "Skipped standard sandbox delays, earning 527 clicks and top-30 rankings in under 4 weeks.",
+    challenge: "Brand-new domains usually take 3 to 6 months to get noticed and indexed by Google with almost zero early organic traffic.",
+    strategy: [
+      "Verified brand entity and submitted clean XML sitemaps directly to Google",
+      "Built tight topical authority before going live",
+      "Optimized technical performance for sub-1s load times",
+    ],
+    commercialTakeaway: "Bypassed standard sandbox delays, earning 527 verified clicks and top-30 rankings across target terms in just 25 days.",
   },
   {
     id: "proof-medium",
-    title: "Medium Organic Thought Leadership",
+    title: "Medium — Organic Content Growth",
     clientOrDomain: "medium.com/@AyanFreelancer",
-    location: "Personal Authority & Audience",
+    clientCategory: "Content & Audience",
+    location: "Medium Platform",
     platform: "Medium Platform",
-    timeframe: "June 2026 (30 Days)",
+    timeframe: "30 Days (June 2026)",
     screenshotUrl: "/case-studies/medium-organic-growth.png",
     headlineMetric: "348",
-    headlineMetricLabel: "Organic Presentations",
+    headlineMetricLabel: "Organic Readers",
     secondaryMetrics: [
       { label: "Full Reads", value: "31" },
-      { label: "Article Views", value: "56" },
-      { label: "New Followers", value: "+20" },
+      { label: "Followers", value: "+20" },
       { label: "Subscribers", value: "+19" },
+      { label: "Ad Spend", value: "$0" },
     ],
-    summary: "Built authentic search & growth audience on Medium, converting high-intent readers into 20 new followers and 19 email subscribers in one month.",
-    plainEnglishImpact: "Turned 348 readers into 31 deep reads, +20 active followers, and +19 email newsletter subscribers.",
+    summary: "Wrote practical SEO breakdowns that attracted 348 targeted readers, converting them into 20 followers and 19 email subscribers in one month.",
+    plainEnglishImpact: "Turned 348 organic readers into 31 complete reads, 20 followers, and 19 email newsletter subscribers.",
+    challenge: "Starting with zero followers on Medium and needing to build an audience without paid promotion.",
+    strategy: [
+      "Published concise, practical SEO case studies and workflows",
+      "Targeted search topics with clear, high-intent headlines",
+      "Added simple newsletter callouts that converted readers into subscribers",
+    ],
+    commercialTakeaway: "Turned 348 readers into 31 full reads, 20 followers, and 19 email subscribers in 30 days without paid promotion.",
     externalLink: "https://medium.com/@AyanFreelancer",
   },
 ];
@@ -437,54 +422,50 @@ export const VERIFIED_PROOFS: VerifiedProof[] = [
 export const PLAYBOOK_STEPS: PlaybookStep[] = [
   {
     step: "01",
-    title: "Website & Social Media Audit",
-    tagline: "Finding what is broken and blocking your growth.",
+    title: "Audit & Fix",
+    tagline: "Find what's hurting your traffic.",
     details:
-      "I review your website technical health, search rankings, and audit your social profiles (branding, bio, posting schedule, and audience engagement).",
+      "I inspect your site speed, crawl errors, and current Google rankings to spot quick fixes.",
     tactics: [
-      "Find slow pages and technical errors hurting your Google rank",
-      "Audit existing social profiles, bio links, and highlight funnels",
-      "Analyze your past social posts to see what worked and what didn't",
-      "Deliver a clean, prioritized action plan for both channels",
+      "Fix technical & speed errors",
+      "Audit search rankings & competitors",
+      "Clear priority action plan",
     ],
   },
   {
     step: "02",
-    title: "Keyword & Social Content Plan",
-    tagline: "Planning content that ranks and builds your brand.",
+    title: "Target Keywords",
+    tagline: "Find terms that buyers actually search.",
     details:
-      "We map out high-intent search terms for your website and create weekly social media content pillars that attract your exact target audience.",
+      "We focus on high-intent search terms that bring ready-to-buy customers, not empty clicks.",
     tactics: [
-      "Find search keywords your competitors missed",
-      "Build a monthly social calendar with clear weekly pillars",
-      "Organize website pages so Google understands your expertise",
-      "Draft engaging captions, carousel ideas, and brand posts",
+      "Target low-competition buyer keywords",
+      "Plan clean monthly content topics",
+      "Structure pages for Page 1 ranking",
     ],
   },
   {
     step: "03",
-    title: "Full Account Management & Posting",
-    tagline: "Day-to-day management so you don't have to worry.",
+    title: "Execute & Optimize",
+    tagline: "Hands-off work done for you.",
     details:
-      "I manage your social profiles: scheduling posts, formatting graphics and carousels, writing compelling captions, and actively engaging with your community.",
+      "I update your pages, fix metadata, and handle technical SEO so you don't have to.",
     tactics: [
-      "Regular scheduled posting on Instagram, LinkedIn, or X",
-      "Daily reply to comments and community engagement",
-      "Optimizing hashtags, tags, and posting time for maximum reach",
-      "Consistent brand voice across all active platforms",
+      "Optimize titles, headers & copy",
+      "Improve page speed & mobile experience",
+      "Build trusted search authority",
     ],
   },
   {
     step: "04",
-    title: "Turn Traffic & Followers into Customers",
-    tagline: "Making sure visitors and followers actually buy.",
+    title: "Get Real Leads",
+    tagline: "Turn visitors into paying customers.",
     details:
-      "Traffic and followers mean nothing if nobody buys. We optimize your website calls-to-action and social bio funnels so people book calls or buy products.",
+      "Traffic is only useful if it converts. We focus on getting you direct phone calls and inquiries.",
     tactics: [
-      "Optimized bio links and landing pages to capture leads",
-      "Simple, fast contact forms that don't lose inquiries",
-      "Monthly plain-English reports showing real growth and leads",
-      "Ongoing tweaks so your growth keeps compounding every month",
+      "Optimize pages for calls & form fills",
+      "Track real ranking gains and leads",
+      "Short, plain-English monthly report",
     ],
   },
 ];

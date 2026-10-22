@@ -36,6 +36,18 @@ export function scrollToSection(targetId: string) {
   }
 }
 
+export function pauseLenis() {
+  if (lenisInstance) {
+    lenisInstance.stop();
+  }
+}
+
+export function resumeLenis() {
+  if (lenisInstance) {
+    lenisInstance.start();
+  }
+}
+
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({

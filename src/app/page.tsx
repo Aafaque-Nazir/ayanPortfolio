@@ -2,10 +2,11 @@ import React from "react";
 import SmoothScroll from "@/components/SmoothScroll";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
+import SkillsAndTools from "@/components/SkillsAndTools";
+import Experience from "@/components/Experience";
 import CaseStudies from "@/components/CaseStudies";
 import Playbook from "@/components/Playbook";
-import Services from "@/components/Services";
-import GrowthEstimator from "@/components/GrowthEstimator";
 import AuditRequest from "@/components/AuditRequest";
 import Footer from "@/components/Footer";
 
@@ -71,10 +72,11 @@ export default function Home() {
 
           <main className="flex-grow">
             <Hero />
-            <CaseStudies />
+            <About />
+            <SkillsAndTools />
+            <Experience />
             <Playbook />
-            <Services />
-            <GrowthEstimator />
+            <CaseStudies />
             <AuditRequest />
           </main>
 

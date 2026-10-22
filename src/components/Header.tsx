@@ -30,12 +30,13 @@ export default function Header() {
         </a>
 
         {/* Desktop Navigation Links + Dark Mode Toggle */}
-        <nav className="hidden md:flex items-center gap-6 text-xs font-medium text-zinc-700 dark:text-zinc-200">
+        <nav className="hidden md:flex items-center gap-5 text-xs font-medium text-zinc-700 dark:text-zinc-200">
           {[
-            { href: "#work", label: "Work", id: "work" },
+            { href: "#about", label: "About", id: "about" },
+            { href: "#skills", label: "Skills & Tools", id: "skills" },
+            { href: "#experience", label: "Experience", id: "experience" },
             { href: "#process", label: "Process", id: "process" },
-            { href: "#services", label: "Services", id: "services" },
-            { href: "#calculator", label: "Calculator", id: "calculator" },
+            { href: "#case-studies", label: "Case Studies", id: "case-studies" },
           ].map((link) => (
             <a
               key={link.id}
@@ -82,11 +83,25 @@ export default function Header() {
         <div className="md:hidden border-t border-zinc-200 dark:border-zinc-700 bg-white/98 dark:bg-[#09090B]/98 backdrop-blur-md px-6 py-5 space-y-3 transition-colors duration-200 animate-fade-slide-up">
           <div className="flex flex-col space-y-3 text-sm font-medium text-zinc-800 dark:text-zinc-200">
             <a
-              href="#work"
-              onClick={(e) => handleSmoothScroll(e, "work")}
+              href="#about"
+              onClick={(e) => handleSmoothScroll(e, "about")}
               className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
             >
-              Work
+              About
+            </a>
+            <a
+              href="#skills"
+              onClick={(e) => handleSmoothScroll(e, "skills")}
+              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+            >
+              Skills &amp; Tools
+            </a>
+            <a
+              href="#experience"
+              onClick={(e) => handleSmoothScroll(e, "experience")}
+              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+            >
+              Experience
             </a>
             <a
               href="#process"
@@ -96,18 +111,11 @@ export default function Header() {
               Process
             </a>
             <a
-              href="#services"
-              onClick={(e) => handleSmoothScroll(e, "services")}
+              href="#case-studies"
+              onClick={(e) => handleSmoothScroll(e, "case-studies")}
               className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
             >
-              Services
-            </a>
-            <a
-              href="#calculator"
-              onClick={(e) => handleSmoothScroll(e, "calculator")}
-              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
-            >
-              Calculator
+              Case Studies
             </a>
             <a
               href="#contact"
