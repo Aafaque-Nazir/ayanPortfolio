@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowDown, ArrowDownRight, ArrowUpRight, Mail } from "lucide-react";
+import { ArrowDown, ArrowDownRight, ArrowUpRight, Mail, MapPin } from "lucide-react";
 import { scrollToSection } from "@/components/SmoothScroll";
 
 export default function Hero() {
@@ -35,8 +35,8 @@ export default function Hero() {
     <section className="pt-10 sm:pt-14 md:pt-16 pb-8 sm:pb-12 border-b border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-[#09090B] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          {/* Left Column: Greeting, Value Prop, Subtext, CTA Button & Domain Pill */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+          {/* Left Column: Greeting, Value Prop, CTA Buttons & Direct Channels */}
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-zinc-950 dark:text-zinc-50 tracking-tight leading-[1.08]">
               Hi, I&apos;m Ayan.
@@ -45,13 +45,8 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Supporting Bio */}
-            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
-              SEO &amp; Digital Marketing Specialist based in Dubai, UAE. I help local businesses and websites get discovered by real customers without paying for ads.
-            </p>
-
             {/* Action Buttons */}
-            <div className="pt-1 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
               <button
                 type="button"
                 onClick={() => scrollToSection("contact")}
@@ -71,41 +66,67 @@ export default function Hero() {
               </button>
             </div>
 
-            {/* Domain & Direct Channels - Clean Minimalist Text */}
-            <div className="pt-2 flex items-center justify-center lg:justify-start gap-3 font-mono text-xs text-zinc-500 dark:text-zinc-400">
-              <span className="font-semibold text-zinc-900 dark:text-zinc-200">
-                ayanaklekar.com
-              </span>
-              <span className="text-zinc-300 dark:text-zinc-700">•</span>
-              <div className="flex items-center gap-2.5">
-                {channels.map((channel) => (
-                  <a
-                    key={channel.name}
-                    href={channel.url}
-                    target={channel.name === "Email" ? undefined : "_blank"}
-                    rel={channel.name === "Email" ? undefined : "noopener noreferrer"}
-                    className="hover:text-zinc-950 dark:hover:text-white transition-colors"
-                    title={channel.name}
-                    aria-label={channel.name}
-                  >
-                    {channel.icon}
-                  </a>
-                ))}
-              </div>
+            {/* Direct Connect Channels */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+              {channels.map((channel) => (
+                <a
+                  key={channel.name}
+                  href={channel.url}
+                  target={channel.name === "Email" ? undefined : "_blank"}
+                  rel={channel.name === "Email" ? undefined : "noopener noreferrer"}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800/90 bg-zinc-50 dark:bg-zinc-900/60 hover:bg-zinc-100 dark:hover:bg-zinc-800/90 hover:border-zinc-300 dark:hover:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-all text-xs font-medium active:scale-95 shadow-2xs"
+                  title={channel.name}
+                  aria-label={channel.name}
+                >
+                  {channel.icon}
+                  <span>{channel.name}</span>
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Right Column: Clean Portrait Photo */}
+          {/* Right Column: Premium Portrait Presentation */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Photo Box */}
-              <div className="relative w-60 sm:w-72 md:w-80 lg:w-[320px] xl:w-[350px] aspect-[4/5] rounded-2xl sm:rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 overflow-hidden shadow-lg flex items-center justify-center group">
-                <img
-                  src="/ayan.jpg"
-                  alt="Ayan Aklekar - SEO Specialist & Digital Marketer"
-                  loading="eager"
-                  className="w-full h-full object-cover object-[center_16%] transition-transform duration-300 group-hover:scale-[1.02] select-none"
-                />
+            <div className="relative group">
+              {/* Ambient Glow */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-2 sm:-inset-3 bg-gradient-to-tr from-emerald-500/10 via-zinc-400/10 to-blue-500/10 rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-40 group-hover:opacity-90 transition-opacity duration-500"
+              />
+
+              {/* Outer Elegant Frame */}
+              <div className="relative p-1.5 sm:p-2 rounded-3xl sm:rounded-[2rem] bg-gradient-to-b from-zinc-200/90 via-zinc-100 to-zinc-200/60 dark:from-zinc-700/50 dark:via-zinc-800/40 dark:to-zinc-900/80 shadow-2xl dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] ring-1 ring-black/5 dark:ring-white/10">
+                {/* Photo Container */}
+                <div className="relative w-64 sm:w-72 md:w-80 lg:w-[320px] xl:w-[340px] aspect-[4/5] rounded-[1.25rem] sm:rounded-[1.5rem] bg-zinc-900 overflow-hidden flex items-center justify-center">
+                  <img
+                    src="/ayan.jpg"
+                    alt="Ayan Aklekar - SEO Specialist & Digital Marketer"
+                    loading="eager"
+                    className="w-full h-full object-cover object-[center_8%] transition-transform duration-700 ease-out group-hover:scale-[1.03] select-none"
+                  />
+
+                  {/* Subtle Bottom Vignette for depth */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none"
+                  />
+
+                  {/* Floating Badges */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-950/85 dark:bg-black/85 backdrop-blur-md border border-white/15 text-white shadow-md text-[11px] font-medium tracking-tight">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </span>
+                      <span>Available for projects</span>
+                    </div>
+
+                    <div className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-zinc-950/85 dark:bg-black/85 backdrop-blur-md border border-white/15 text-zinc-300 shadow-md text-[11px] font-medium">
+                      <MapPin className="w-3 h-3 text-zinc-400" />
+                      <span>Dubai, UAE</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
