@@ -121,6 +121,33 @@ input[type="range"]:active::-webkit-slider-thumb {
   animation: fadeSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Executive Corner Bracket Beam Animations (Sleek, High-Precision, Subtle) */
+@keyframes cornerBeamTL {
+  from {
+    stroke-dashoffset: 205;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes cornerBeamBR {
+  from {
+    stroke-dashoffset: 205;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-corner-beam-tl {
+  animation: cornerBeamTL 3.2s linear infinite;
+}
+
+.animate-corner-beam-br {
+  animation: cornerBeamBR 3.2s linear infinite;
+}
+
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
