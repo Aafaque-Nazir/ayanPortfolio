@@ -108,7 +108,18 @@ export default function Hero() {
                   }
                 `}</style>
 
-                {/* Exactly 2 Compact Opposite Pure White Beams (180° apart, strictly 2 lines total) */}
+                {/* LIGHT MODE: 2 Crisp Deep Onyx Beams (high contrast on light canvas) */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    animation: "spinBorder 4.5s linear infinite",
+                    willChange: "transform",
+                    filter: "drop-shadow(0 0 2px rgba(9, 9, 11, 0.5))",
+                  }}
+                  className="photo-beam-spin block dark:hidden absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_145deg,rgba(9,9,11,0.25)_160deg,#09090B_180deg,transparent_180.5deg,transparent_325deg,rgba(9,9,11,0.25)_340deg,#09090B_360deg)] pointer-events-none"
+                />
+
+                {/* DARK MODE: Exactly 2 Compact Opposite Pure White Beams (180° apart) */}
                 <div
                   aria-hidden="true"
                   style={{
@@ -116,11 +127,11 @@ export default function Hero() {
                     willChange: "transform",
                     filter: "drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))",
                   }}
-                  className="photo-beam-spin absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_145deg,rgba(255,255,255,0.3)_160deg,#ffffff_180deg,transparent_180.5deg,transparent_325deg,rgba(255,255,255,0.3)_340deg,#ffffff_360deg)] pointer-events-none"
+                  className="photo-beam-spin hidden dark:block absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_145deg,rgba(255,255,255,0.3)_160deg,#ffffff_180deg,transparent_180.5deg,transparent_325deg,rgba(255,255,255,0.3)_340deg,#ffffff_360deg)] pointer-events-none"
                 />
 
                 {/* Base subtle static track */}
-                <div className="absolute inset-0 rounded-3xl sm:rounded-[2rem] ring-1 ring-inset ring-zinc-300/40 dark:ring-white/10 pointer-events-none" />
+                <div className="absolute inset-0 rounded-3xl sm:rounded-[2rem] ring-1 ring-inset ring-zinc-300/60 dark:ring-white/10 pointer-events-none" />
 
                 {/* Photo Container */}
                 <div className="relative w-full aspect-[4/3.8] rounded-[calc(1.5rem-1.5px)] sm:rounded-[calc(2rem-1.5px)] bg-zinc-900 overflow-hidden flex items-center justify-center">
