@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowDown, ArrowDownRight, ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { ArrowDown, ArrowDownRight, ArrowUpRight, Mail } from "lucide-react";
 import { scrollToSection } from "@/components/SmoothScroll";
 
 export default function Hero() {
@@ -34,9 +34,9 @@ export default function Hero() {
   return (
     <section className="pt-10 sm:pt-14 md:pt-16 pb-8 sm:pb-12 border-b border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-[#09090B] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Greeting, Value Prop, CTA Buttons & Direct Channels */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+          <div className="lg:col-span-6 space-y-6 sm:space-y-8 text-center lg:text-left">
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-zinc-950 dark:text-zinc-50 tracking-tight leading-[1.08]">
               Hi, I&apos;m Ayan.
@@ -85,47 +85,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Premium Portrait Presentation */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative group">
+          {/* Right Column: Prominent Portrait Presentation */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="relative group w-full max-w-[360px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[500px]">
               {/* Ambient Glow */}
               <div
                 aria-hidden="true"
-                className="absolute -inset-2 sm:-inset-3 bg-gradient-to-tr from-emerald-500/10 via-zinc-400/10 to-blue-500/10 rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-40 group-hover:opacity-90 transition-opacity duration-500"
+                className="absolute -inset-2 sm:-inset-4 bg-gradient-to-tr from-emerald-500/10 via-zinc-400/10 to-blue-500/10 rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-40 group-hover:opacity-90 transition-opacity duration-500"
               />
 
               {/* Outer Elegant Frame */}
-              <div className="relative p-1.5 sm:p-2 rounded-3xl sm:rounded-[2rem] bg-gradient-to-b from-zinc-200/90 via-zinc-100 to-zinc-200/60 dark:from-zinc-700/50 dark:via-zinc-800/40 dark:to-zinc-900/80 shadow-2xl dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] ring-1 ring-black/5 dark:ring-white/10">
+              <div className="relative p-1.5 sm:p-2.5 rounded-3xl sm:rounded-[2rem] bg-gradient-to-b from-zinc-200/90 via-zinc-100 to-zinc-200/60 dark:from-zinc-700/50 dark:via-zinc-800/40 dark:to-zinc-900/80 shadow-2xl dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] ring-1 ring-black/5 dark:ring-white/10">
                 {/* Photo Container */}
-                <div className="relative w-64 sm:w-72 md:w-80 lg:w-[320px] xl:w-[340px] aspect-[4/5] rounded-[1.25rem] sm:rounded-[1.5rem] bg-zinc-900 overflow-hidden flex items-center justify-center">
+                <div className="relative w-full aspect-[4/3.8] rounded-2xl sm:rounded-[1.4rem] bg-zinc-900 overflow-hidden flex items-center justify-center">
                   <img
-                    src="/ayan.jpg"
+                    src="/ayan.png"
                     alt="Ayan Aklekar - SEO Specialist & Digital Marketer"
                     loading="eager"
-                    className="w-full h-full object-cover object-[center_8%] transition-transform duration-700 ease-out group-hover:scale-[1.03] select-none"
+                    className="w-full h-full object-cover object-[center_10%] transition-transform duration-700 ease-out group-hover:scale-[1.03] select-none"
                   />
 
-                  {/* Subtle Bottom Vignette for depth */}
+                  {/* Subtle Depth Vignette */}
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none"
+                    className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"
                   />
-
-                  {/* Floating Badges */}
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-950/85 dark:bg-black/85 backdrop-blur-md border border-white/15 text-white shadow-md text-[11px] font-medium tracking-tight">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                      </span>
-                      <span>Available for projects</span>
-                    </div>
-
-                    <div className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-zinc-950/85 dark:bg-black/85 backdrop-blur-md border border-white/15 text-zinc-300 shadow-md text-[11px] font-medium">
-                      <MapPin className="w-3 h-3 text-zinc-400" />
-                      <span>Dubai, UAE</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
