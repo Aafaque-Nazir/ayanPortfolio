@@ -121,36 +121,25 @@ input[type="range"]:active::-webkit-slider-thumb {
   animation: fadeSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Executive Corner Bracket Beam Animations (Sleek, High-Precision, Subtle) */
-@keyframes cornerBeamTL {
+/* 360° Rotating Pure White Border Beam */
+@keyframes spinBorder {
   from {
-    stroke-dashoffset: 205;
+    transform: rotate(0deg);
   }
   to {
-    stroke-dashoffset: 0;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes cornerBeamBR {
-  from {
-    stroke-dashoffset: 205;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+.animate-spin-border {
+  animation: spinBorder 4s linear infinite !important;
+  will-change: transform;
 }
 
-.animate-corner-beam-tl {
-  animation: cornerBeamTL 3.2s linear infinite;
-}
-
-.animate-corner-beam-br {
-  animation: cornerBeamBR 3.2s linear infinite;
-}
-
-/* Accessibility: Respect Reduced Motion */
+/* Accessibility: Respect Reduced Motion (exempting essential decorative rotating border beams) */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+  *:not(.animate-spin-border, .animate-spin-border *),
+  ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

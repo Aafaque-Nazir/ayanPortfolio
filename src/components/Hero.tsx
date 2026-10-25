@@ -91,122 +91,44 @@ export default function Hero() {
               {/* Ambient Glow */}
               <div
                 aria-hidden="true"
-                className="absolute -inset-2 sm:-inset-4 bg-gradient-to-tr from-emerald-500/10 via-zinc-400/10 to-blue-500/10 rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-40 group-hover:opacity-90 transition-opacity duration-500"
+                className="absolute -inset-2 sm:-inset-4 bg-gradient-to-tr from-zinc-500/10 via-zinc-400/5 to-zinc-500/10 rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-40 group-hover:opacity-90 transition-opacity duration-500"
               />
 
-              {/* Outer Elegant Frame with Animated Corner Accents */}
-              <div className="relative p-1.5 sm:p-2.5 rounded-3xl sm:rounded-[2rem] bg-gradient-to-b from-zinc-200/90 via-zinc-100 to-zinc-200/60 dark:from-zinc-700/50 dark:via-zinc-800/40 dark:to-zinc-900/80 shadow-2xl dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] ring-1 ring-black/5 dark:ring-white/10">
-                {/* Top-Left Animated Corner Bracket */}
+              {/* Outer Container with 360° Rotating Pure White Border Beam */}
+              <div className="relative p-[1.5px] rounded-3xl sm:rounded-[2rem] overflow-hidden shadow-2xl dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)]">
+                {/* Embedded style ensuring keyframes are loaded and never frozen */}
+                <style>{`
+                  @keyframes spinBorder {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                  }
+                  .photo-beam-spin {
+                    animation: spinBorder 4s linear infinite !important;
+                    will-change: transform;
+                  }
+                `}</style>
+
+                {/* Exactly 2 Compact Opposite Pure White Beams (180° apart, strictly 2 lines total) */}
                 <div
                   aria-hidden="true"
-                  className="absolute -top-1.5 -left-1.5 sm:-top-2 sm:-left-2 w-16 h-16 sm:w-20 sm:h-20 pointer-events-none z-20"
-                >
-                  <svg
-                    viewBox="0 0 80 80"
-                    className="w-full h-full overflow-visible"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <filter id="subtle-glow-tl" x="-40%" y="-40%" width="180%" height="180%">
-                        <feGaussianBlur stdDeviation="2" result="blur" />
-                        <feMerge>
-                          <feMergeNode in="blur" />
-                          <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                      </filter>
+                  style={{
+                    animation: "spinBorder 4.5s linear infinite",
+                    willChange: "transform",
+                    filter: "drop-shadow(0 0 3px rgba(255, 255, 255, 0.8))",
+                  }}
+                  className="photo-beam-spin absolute -inset-[150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_145deg,rgba(255,255,255,0.3)_160deg,#ffffff_180deg,transparent_180.5deg,transparent_325deg,rgba(255,255,255,0.3)_340deg,#ffffff_360deg)] pointer-events-none"
+                />
 
-                      <linearGradient id="beam-gradient-tl" x1="0%" y1="100%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                        <stop offset="30%" stopColor="#34d399" stopOpacity="0.8" />
-                        <stop offset="75%" stopColor="#ffffff" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-
-                    {/* Permanent Equal-Length Corner Baseline */}
-                    <path
-                      d="M 1.5 80 V 28 A 26.5 26.5 0 0 1 28 1.5 H 80"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      className="text-zinc-400/50 dark:text-zinc-500/50"
-                    />
-
-                    {/* Animated Beam Sweeping Around the Corner */}
-                    <path
-                      d="M 1.5 80 V 28 A 26.5 26.5 0 0 1 28 1.5 H 80"
-                      stroke="url(#beam-gradient-tl)"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      filter="url(#subtle-glow-tl)"
-                      className="animate-corner-beam-tl"
-                      style={{
-                        strokeDasharray: "45 160",
-                      }}
-                    />
-                  </svg>
-                </div>
-
-                {/* Bottom-Right Animated Corner Bracket */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -bottom-1.5 -right-1.5 sm:-bottom-2 sm:-right-2 w-16 h-16 sm:w-20 sm:h-20 pointer-events-none z-20"
-                >
-                  <svg
-                    viewBox="0 0 80 80"
-                    className="w-full h-full overflow-visible"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <filter id="subtle-glow-br" x="-40%" y="-40%" width="180%" height="180%">
-                        <feGaussianBlur stdDeviation="2" result="blur" />
-                        <feMerge>
-                          <feMergeNode in="blur" />
-                          <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                      </filter>
-
-                      <linearGradient id="beam-gradient-br" x1="100%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                        <stop offset="30%" stopColor="#34d399" stopOpacity="0.8" />
-                        <stop offset="75%" stopColor="#ffffff" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-
-                    {/* Permanent Equal-Length Corner Baseline */}
-                    <path
-                      d="M 78.5 0 V 52 A 26.5 26.5 0 0 1 52 78.5 H 0"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      className="text-zinc-400/50 dark:text-zinc-500/50"
-                    />
-
-                    {/* Animated Beam Sweeping Around the Corner */}
-                    <path
-                      d="M 78.5 0 V 52 A 26.5 26.5 0 0 1 52 78.5 H 0"
-                      stroke="url(#beam-gradient-br)"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      filter="url(#subtle-glow-br)"
-                      className="animate-corner-beam-br"
-                      style={{
-                        strokeDasharray: "45 160",
-                      }}
-                    />
-                  </svg>
-                </div>
+                {/* Base subtle static track */}
+                <div className="absolute inset-0 rounded-3xl sm:rounded-[2rem] ring-1 ring-inset ring-zinc-300/40 dark:ring-white/10 pointer-events-none" />
 
                 {/* Photo Container */}
-                <div className="relative w-full aspect-[4/3.8] rounded-2xl sm:rounded-[1.4rem] bg-zinc-900 overflow-hidden flex items-center justify-center">
+                <div className="relative w-full aspect-[4/3.8] rounded-[calc(1.5rem-1.5px)] sm:rounded-[calc(2rem-1.5px)] bg-zinc-900 overflow-hidden flex items-center justify-center">
                   <img
                     src="/ayan.png"
                     alt="Ayan Aklekar - SEO Specialist & Digital Marketer"
                     loading="eager"
-                    className="w-full h-full object-cover object-[center_10%] transition-transform duration-700 ease-out group-hover:scale-[1.03] select-none"
+                    className="w-full h-full object-cover object-[center_10%] transition-transform duration-700 ease-out group-hover:scale-[1.02] select-none"
                   />
 
                   {/* Subtle Depth Vignette */}
