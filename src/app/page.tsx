@@ -67,7 +67,7 @@ export default function Home() {
       />
 
       <SmoothScroll>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen overflow-x-clip">
           <Header />
 
           <main className="flex-grow">
