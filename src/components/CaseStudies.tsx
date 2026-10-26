@@ -134,22 +134,22 @@ export default function CaseStudies() {
             {/* -------------------- FOLDER CARD 1: SEO & GOOGLE SEARCH -------------------- */}
             <div
               onClick={() => handleOpenFolder("seo")}
-              className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-7 hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-2xs"
+              className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-7 hover:border-blue-500/60 dark:hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-lg dark:hover:shadow-blue-950/20 transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-2xs"
             >
               <div className="space-y-3">
                 {/* Folder Meta Row */}
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-zinc-900 border border-blue-200/70 dark:border-zinc-800 flex items-center justify-center text-blue-600 dark:text-zinc-100 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-zinc-100 dark:group-hover:text-zinc-950 transition-colors shadow-2xs">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/70 dark:border-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-colors shadow-2xs">
                     <Folder className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-mono text-blue-600/80 dark:text-zinc-400 font-semibold">
+                  <span className="text-xs font-mono text-blue-600 dark:text-blue-400 font-semibold">
                     {categoryCounts.all} projects
                   </span>
                 </div>
 
                 {/* Title & Description */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-zinc-300 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     SEO &amp; Google Search
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-zinc-400 mt-2 leading-relaxed">
@@ -160,22 +160,22 @@ export default function CaseStudies() {
 
               {/* Card Footer: Explore Folder Action */}
               <div className="mt-8 pt-4 border-t border-slate-100 dark:border-zinc-800/80 flex items-center justify-between text-xs font-mono">
-                <span className="text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-white font-semibold transition-colors">
+                <span className="text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 font-semibold transition-colors">
                   Explore Folder
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-white group-hover:translate-x-1.5 transition-all" />
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1.5 transition-all" />
               </div>
             </div>
 
             {/* -------------------- FOLDER CARD 2: SOCIAL MEDIA -------------------- */}
             <div
               onClick={() => handleOpenFolder("social")}
-              className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-7 hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-2xs"
+              className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-7 hover:border-blue-500/60 dark:hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-lg dark:hover:shadow-blue-950/20 transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-2xs"
             >
               <div className="space-y-3">
                 {/* Folder Meta Row */}
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-zinc-900 border border-blue-200/70 dark:border-zinc-800 flex items-center justify-center text-blue-600 dark:text-zinc-100 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-zinc-100 dark:group-hover:text-zinc-950 transition-colors shadow-2xs">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/70 dark:border-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-colors shadow-2xs">
                     <Folder className="w-5 h-5" />
                   </div>
                   <span className="text-xs font-mono text-slate-400 dark:text-zinc-500 font-semibold">
@@ -185,7 +185,7 @@ export default function CaseStudies() {
 
                 {/* Title & Description */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-zinc-300 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     Social Media
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-zinc-400 mt-2 leading-relaxed">
@@ -196,22 +196,22 @@ export default function CaseStudies() {
 
               {/* Card Footer: Explore Folder Action */}
               <div className="mt-8 pt-4 border-t border-slate-100 dark:border-zinc-800/80 flex items-center justify-between text-xs font-mono">
-                <span className="text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-white font-semibold transition-colors">
+                <span className="text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 font-semibold transition-colors">
                   Explore Folder
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-white group-hover:translate-x-1.5 transition-all" />
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1.5 transition-all" />
               </div>
             </div>
 
             {/* -------------------- FOLDER CARD 3: WORDPRESS WEBSITES -------------------- */}
             <div
               onClick={() => handleOpenFolder("wordpress")}
-              className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-7 hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-2xs"
+              className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-7 hover:border-blue-500/60 dark:hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 dark:hover:shadow-lg dark:hover:shadow-blue-950/20 transition-all duration-200 cursor-pointer flex flex-col justify-between shadow-2xs"
             >
               <div className="space-y-3">
                 {/* Folder Meta Row */}
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-zinc-900 border border-blue-200/70 dark:border-zinc-800 flex items-center justify-center text-blue-600 dark:text-zinc-100 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-zinc-100 dark:group-hover:text-zinc-950 transition-colors shadow-2xs">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/70 dark:border-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-colors shadow-2xs">
                     <Folder className="w-5 h-5" />
                   </div>
                   <span className="text-xs font-mono text-slate-400 dark:text-zinc-500 font-semibold">
@@ -221,7 +221,7 @@ export default function CaseStudies() {
 
                 {/* Title & Description */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-zinc-300 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     WordPress Websites
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-zinc-400 mt-2 leading-relaxed">
@@ -232,10 +232,10 @@ export default function CaseStudies() {
 
               {/* Card Footer: Explore Folder Action */}
               <div className="mt-8 pt-4 border-t border-slate-100 dark:border-zinc-800/80 flex items-center justify-between text-xs font-mono">
-                <span className="text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 font-semibold transition-colors">
+                <span className="text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 font-semibold transition-colors">
                   Explore Folder
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-white group-hover:translate-x-1.5 transition-all" />
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1.5 transition-all" />
               </div>
             </div>
           </div>
@@ -252,9 +252,9 @@ export default function CaseStudies() {
               <button
                 type="button"
                 onClick={handleBackToFolders}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-600 border border-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-200 dark:border-zinc-800 text-xs font-mono font-semibold transition-all cursor-pointer shadow-2xs group self-start"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-600 border border-slate-200 dark:bg-zinc-900 dark:hover:bg-blue-950/30 dark:text-zinc-200 dark:hover:text-blue-400 dark:border-zinc-800 dark:hover:border-blue-900/50 text-xs font-mono font-semibold transition-all cursor-pointer shadow-2xs group self-start"
               >
-                <ArrowLeft className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-600 group-hover:-translate-x-0.5 transition-transform" />
+                <ArrowLeft className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:-translate-x-0.5 transition-transform" />
                 <span>All Folders</span>
               </button>
 
@@ -265,8 +265,8 @@ export default function CaseStudies() {
                   onClick={() => setOpenedFolder("seo")}
                   className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 shrink-0 ${
                     openedFolder === "seo"
-                      ? "bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 font-bold shadow-xs"
-                      : "bg-slate-50 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-zinc-200 border border-slate-200 dark:border-zinc-800 hover:border-blue-200"
+                      ? "bg-blue-600 text-white font-bold shadow-xs shadow-blue-500/20 dark:shadow-blue-900/40"
+                      : "bg-slate-50 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-zinc-800 hover:border-blue-200 dark:hover:border-blue-900/50"
                   }`}
                 >
                   <Folder className="w-3 h-3" />
@@ -278,8 +278,8 @@ export default function CaseStudies() {
                   onClick={() => setOpenedFolder("social")}
                   className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 shrink-0 ${
                     openedFolder === "social"
-                      ? "bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 font-bold shadow-xs"
-                      : "bg-slate-50 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-zinc-200 border border-slate-200 dark:border-zinc-800 hover:border-blue-200"
+                      ? "bg-blue-600 text-white font-bold shadow-xs shadow-blue-500/20 dark:shadow-blue-900/40"
+                      : "bg-slate-50 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-zinc-800 hover:border-blue-200 dark:hover:border-blue-900/50"
                   }`}
                 >
                   <Share2 className="w-3 h-3" />
@@ -291,8 +291,8 @@ export default function CaseStudies() {
                   onClick={() => setOpenedFolder("wordpress")}
                   className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 shrink-0 ${
                     openedFolder === "wordpress"
-                      ? "bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 font-bold shadow-xs"
-                      : "bg-slate-50 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-zinc-200 border border-slate-200 dark:border-zinc-800 hover:border-blue-200"
+                      ? "bg-blue-600 text-white font-bold shadow-xs shadow-blue-500/20 dark:shadow-blue-900/40"
+                      : "bg-slate-50 dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-zinc-800 hover:border-blue-200 dark:hover:border-blue-900/50"
                   }`}
                 >
                   <Laptop className="w-3 h-3" />
@@ -320,15 +320,15 @@ export default function CaseStudies() {
                         onClick={() => setSelectedCategory(subTab.id as CategoryFilter)}
                         className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all duration-150 cursor-pointer flex items-center gap-1.5 shrink-0 ${
                           isActive
-                            ? "bg-blue-600 dark:bg-zinc-200 text-white dark:text-zinc-950 font-semibold shadow-xs"
-                            : "bg-slate-50 dark:bg-zinc-900/60 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-zinc-200 border border-slate-200 dark:border-zinc-800 hover:border-blue-200"
+                            ? "bg-blue-600 text-white font-semibold shadow-xs shadow-blue-500/20 dark:shadow-blue-900/40"
+                            : "bg-slate-50 dark:bg-zinc-900/60 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-zinc-800 hover:border-blue-200 dark:hover:border-blue-900/50"
                         }`}
                       >
                         <span>{subTab.label}</span>
                         <span
                           className={`text-[11px] font-mono ${
                             isActive
-                              ? "text-blue-100 dark:text-zinc-600 font-normal"
+                              ? "text-blue-100 font-normal"
                               : "text-slate-400 dark:text-zinc-500"
                           }`}
                         >
@@ -348,7 +348,7 @@ export default function CaseStudies() {
                         setSelectedProof(proof);
                         setIsZoomed(false);
                       }}
-                      className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-200 cursor-pointer flex flex-col justify-between overflow-hidden shadow-2xs"
+                      className="group rounded-2xl border border-slate-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] hover:border-blue-500/60 dark:hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-lg dark:hover:shadow-blue-950/20 transition-all duration-200 cursor-pointer flex flex-col justify-between overflow-hidden shadow-2xs"
                     >
                       <div>
                         {/* Clean Screenshot Window */}
@@ -361,8 +361,8 @@ export default function CaseStudies() {
                           />
 
                           <div className="absolute bottom-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono bg-blue-600/95 dark:bg-zinc-950/90 text-white border border-blue-400/50 dark:border-zinc-700 shadow-md backdrop-blur-xs">
-                              <Maximize2 className="w-3 h-3 text-blue-100 dark:text-zinc-300" />
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono bg-blue-600/95 text-white border border-blue-400/50 shadow-md backdrop-blur-xs">
+                              <Maximize2 className="w-3 h-3 text-blue-100" />
                               <span>View Screenshot</span>
                             </span>
                           </div>
@@ -371,7 +371,7 @@ export default function CaseStudies() {
                         {/* Card Content */}
                         <div className="p-4 sm:p-5 space-y-3">
                           <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-zinc-400">
-                            <span className="font-semibold text-blue-600 dark:text-zinc-300">
+                            <span className="font-semibold text-blue-600 dark:text-blue-400">
                               {proof.platform === "Google Business Profile"
                                 ? "Google Maps"
                                 : proof.platform === "Google Search Console"
@@ -381,7 +381,7 @@ export default function CaseStudies() {
                             <span>{proof.location || proof.clientCategory}</span>
                           </div>
 
-                          <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-zinc-300 transition-colors leading-snug">
+                          <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-zinc-50 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-snug">
                             {proof.title}
                           </h3>
 
@@ -393,9 +393,9 @@ export default function CaseStudies() {
 
                       {/* Result Box */}
                       <div className="p-4 sm:p-5 pt-0">
-                        <div className="p-3 rounded-xl bg-blue-50/50 dark:bg-zinc-900/60 border border-blue-100 dark:border-zinc-800/80 flex items-center justify-between">
+                        <div className="p-3 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/40 flex items-center justify-between">
                           <div>
-                            <div className="text-base sm:text-lg font-mono font-black text-blue-600 dark:text-zinc-50 leading-tight">
+                            <div className="text-base sm:text-lg font-mono font-black text-blue-600 dark:text-blue-400 leading-tight">
                               {proof.headlineMetric}
                             </div>
                             <div className="text-[10px] font-mono text-slate-500 dark:text-zinc-400 uppercase tracking-wider font-semibold">
@@ -403,9 +403,9 @@ export default function CaseStudies() {
                             </div>
                           </div>
 
-                          <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-zinc-100 group-hover:translate-x-0.5 transition-all">
+                          <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all">
                             <span>Details</span>
-                            <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-zinc-100 transition-colors" />
+                            <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
                           </span>
                         </div>
                       </div>
@@ -419,7 +419,7 @@ export default function CaseStudies() {
             {openedFolder === "social" && (
               <div className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-10 space-y-6 shadow-2xs">
                 <div className="max-w-xl space-y-2">
-                  <div className="text-[11px] font-mono text-blue-600 dark:text-zinc-400 uppercase tracking-wider font-bold">
+                  <div className="text-[11px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider font-bold">
                     Upcoming Case Studies
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-zinc-50 tracking-tight">
@@ -465,7 +465,7 @@ export default function CaseStudies() {
                   <button
                     type="button"
                     onClick={() => scrollToSection("contact")}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white transition-all cursor-pointer shadow-md shadow-blue-500/20"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold transition-all cursor-pointer shadow-md shadow-blue-500/20 dark:shadow-md dark:shadow-blue-900/30"
                   >
                     <span>Request Social Media Samples</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -474,7 +474,7 @@ export default function CaseStudies() {
                   <button
                     type="button"
                     onClick={() => setOpenedFolder("seo")}
-                    className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-mono text-slate-700 dark:text-zinc-300 hover:bg-blue-50 dark:hover:bg-zinc-900 hover:border-blue-200 hover:text-blue-600 dark:hover:text-white transition-all cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-mono text-slate-700 dark:text-zinc-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 hover:border-blue-200 dark:hover:border-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
                   >
                     View SEO Case Studies ({categoryCounts.all})
                   </button>
@@ -486,7 +486,7 @@ export default function CaseStudies() {
             {openedFolder === "wordpress" && (
               <div className="rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] p-6 sm:p-10 space-y-6 shadow-2xs">
                 <div className="max-w-xl space-y-2">
-                  <div className="text-[11px] font-mono text-blue-600 dark:text-zinc-400 uppercase tracking-wider font-bold">
+                  <div className="text-[11px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider font-bold">
                     Upcoming Case Studies
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-zinc-50 tracking-tight">
@@ -532,7 +532,7 @@ export default function CaseStudies() {
                   <button
                     type="button"
                     onClick={() => scrollToSection("contact")}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white transition-all cursor-pointer shadow-md shadow-blue-500/20"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold transition-all cursor-pointer shadow-md shadow-blue-500/20 dark:shadow-md dark:shadow-blue-900/30"
                   >
                     <span>Request Web Build Audit</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -541,7 +541,7 @@ export default function CaseStudies() {
                   <button
                     type="button"
                     onClick={() => setOpenedFolder("seo")}
-                    className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-mono text-slate-700 dark:text-zinc-300 hover:bg-blue-50 dark:hover:bg-zinc-900 hover:border-blue-200 hover:text-blue-600 dark:hover:text-white transition-all cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-mono text-slate-700 dark:text-zinc-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 hover:border-blue-200 dark:hover:border-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
                   >
                     View SEO Case Studies ({categoryCounts.all})
                   </button>
@@ -627,7 +627,7 @@ export default function CaseStudies() {
                 <div className="space-y-1.5 pb-4 border-b border-slate-200 dark:border-zinc-800">
                   <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] text-slate-500 dark:text-zinc-400">
                     {selectedProof.clientCategory && (
-                      <span className="font-bold text-blue-600 dark:text-zinc-100">
+                      <span className="font-bold text-blue-600 dark:text-blue-400">
                         {selectedProof.clientCategory}
                       </span>
                     )}
@@ -635,14 +635,14 @@ export default function CaseStudies() {
                       <>
                         <span>•</span>
                         <span className="flex items-center gap-1">
-                          <MapPin className="w-3 h-3 text-blue-600 dark:text-zinc-400" />
+                          <MapPin className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                           <span>{selectedProof.location}</span>
                         </span>
                       </>
                     )}
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3 text-blue-600 dark:text-zinc-400" />
+                      <Calendar className="w-3 h-3 text-blue-600 dark:text-blue-400" />
                       <span>{selectedProof.timeframe}</span>
                     </span>
                   </div>
@@ -658,11 +658,11 @@ export default function CaseStudies() {
 
                 {/* 2. Key Metrics Strip */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono">
-                  <div className="p-3 bg-blue-50/60 dark:bg-zinc-900/70 rounded-xl border border-blue-100 dark:border-zinc-800">
-                    <div className="text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-zinc-50">
+                  <div className="p-3 bg-blue-50/60 dark:bg-blue-950/30 rounded-xl border border-blue-100 dark:border-blue-900/50">
+                    <div className="text-xl sm:text-2xl font-extrabold text-blue-600 dark:text-blue-400">
                       {selectedProof.headlineMetric}
                     </div>
-                    <div className="text-[10px] text-blue-700/80 dark:text-zinc-400 font-semibold uppercase tracking-wider mt-0.5 truncate">
+                    <div className="text-[10px] text-blue-700/80 dark:text-blue-300 font-semibold uppercase tracking-wider mt-0.5 truncate">
                       {selectedProof.headlineMetricLabel}
                     </div>
                   </div>
@@ -689,8 +689,8 @@ export default function CaseStudies() {
                       <span className="text-slate-700 dark:text-zinc-300 font-medium truncate">
                         {selectedProof.clientOrDomain} • Verified Dashboard
                       </span>
-                      <span className="text-blue-600 dark:text-zinc-400 flex items-center gap-1.5 font-semibold">
-                        <ShieldCheck className="w-3.5 h-3.5 text-blue-600 dark:text-zinc-300" />
+                      <span className="text-blue-600 dark:text-blue-400 flex items-center gap-1.5 font-semibold">
+                        <ShieldCheck className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         <span>Verified Analytics</span>
                       </span>
                     </div>
@@ -717,7 +717,7 @@ export default function CaseStudies() {
                       href={selectedProof.screenshotUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-blue-600 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-white hover:underline font-semibold"
+                      className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline font-semibold"
                     >
                       <span>Open Full Image</span>
                       <ArrowUpRight className="w-3 h-3" />
@@ -730,7 +730,7 @@ export default function CaseStudies() {
                   {/* Problem */}
                   <div className="p-4 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800 space-y-1.5 flex flex-col justify-between">
                     <div>
-                      <div className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold mb-1">
+                      <div className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold mb-1">
                         The Problem
                       </div>
                       <p className="text-xs text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
@@ -751,7 +751,7 @@ export default function CaseStudies() {
                             key={idx}
                             className="text-xs text-slate-700 dark:text-zinc-300 flex items-start gap-2 leading-relaxed"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-zinc-500 shrink-0 mt-1.5" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 shrink-0 mt-1.5" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -762,7 +762,7 @@ export default function CaseStudies() {
                   {/* The Outcome */}
                   <div className="p-4 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800 space-y-1.5 flex flex-col justify-between">
                     <div>
-                      <div className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold mb-1">
+                      <div className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold mb-1">
                         The Result
                       </div>
                       <p className="text-xs text-slate-800 dark:text-zinc-200 leading-relaxed font-medium">
@@ -782,7 +782,7 @@ export default function CaseStudies() {
                     <button
                       type="button"
                       onClick={handleAuditClick}
-                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white active:scale-[0.99] transition-all cursor-pointer shadow-md shadow-blue-500/20"
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold active:scale-[0.99] transition-all cursor-pointer shadow-md shadow-blue-500/20 dark:shadow-md dark:shadow-blue-900/30"
                     >
                       <span>Get a Free Audit</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -791,7 +791,7 @@ export default function CaseStudies() {
                     <button
                       type="button"
                       onClick={handleCloseModal}
-                      className="px-4 py-2 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-mono text-slate-700 dark:text-zinc-300 hover:bg-blue-50 dark:hover:bg-zinc-900 hover:border-blue-200 hover:text-blue-600 dark:hover:text-white transition-colors cursor-pointer"
+                      className="px-4 py-2 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-mono text-slate-700 dark:text-zinc-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 hover:border-blue-200 dark:hover:border-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
                     >
                       Close (Esc)
                     </button>

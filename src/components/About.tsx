@@ -59,9 +59,9 @@ export default function About() {
             {highlights.map((item, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl border border-slate-200/90 dark:border-zinc-800/80 bg-slate-50/60 dark:bg-[#121215] hover:border-blue-300 dark:hover:border-zinc-700 transition-all duration-150 flex items-start gap-3 shadow-2xs group"
+                className="p-4 rounded-xl border border-slate-200/90 dark:border-zinc-800/80 bg-slate-50/60 dark:bg-[#121215] hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-150 flex items-start gap-3 shadow-2xs group"
               >
-                <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-zinc-900 border border-blue-200/60 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200/60 dark:border-blue-900/50 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   {item.icon}
                 </div>
                 <div className="space-y-0.5 min-w-0">

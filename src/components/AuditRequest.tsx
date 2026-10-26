@@ -111,18 +111,18 @@ export default function AuditRequest() {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-800 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-zinc-800 dark:hover:text-white dark:hover:border-zinc-700 text-slate-700 dark:text-zinc-400 active:scale-90 transition-all duration-150 shrink-0 cursor-pointer"
+                  className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-800 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-blue-950/40 dark:hover:text-blue-400 dark:hover:border-blue-900/50 text-slate-700 dark:text-zinc-400 active:scale-90 transition-all duration-150 shrink-0 cursor-pointer"
                   title="Copy Email Address"
                 >
                   {copiedEmail ? (
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-emerald-400" />
+                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                   ) : (
                     <Copy className="w-3.5 h-3.5" />
                   )}
                 </button>
               </div>
               {copiedEmail && (
-                <div className="text-[10px] font-mono text-blue-600 dark:text-emerald-400 font-semibold animate-fade-slide-up">
+                <div className="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-semibold animate-fade-slide-up">
                   ✓ Copied to clipboard!
                 </div>
               )}
@@ -147,7 +147,7 @@ export default function AuditRequest() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-800 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-zinc-800 dark:hover:text-white dark:hover:border-zinc-700 text-slate-700 dark:text-zinc-400 active:scale-90 transition-all duration-150 shrink-0"
+                    className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-800 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-blue-950/40 dark:hover:text-blue-400 dark:hover:border-blue-900/50 text-slate-700 dark:text-zinc-400 active:scale-90 transition-all duration-150 shrink-0"
                     title="Open in WhatsApp"
                   >
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -155,11 +155,11 @@ export default function AuditRequest() {
                   <button
                     type="button"
                     onClick={handleCopyPhone}
-                    className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-800 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-zinc-800 dark:hover:text-white dark:hover:border-zinc-700 text-slate-700 dark:text-zinc-400 active:scale-90 transition-all duration-150 shrink-0 cursor-pointer"
+                    className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-800 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-blue-950/40 dark:hover:text-blue-400 dark:hover:border-blue-900/50 text-slate-700 dark:text-zinc-400 active:scale-90 transition-all duration-150 shrink-0 cursor-pointer"
                     title="Copy Phone Number"
                   >
                     {copiedPhone ? (
-                      <Check className="w-3.5 h-3.5 text-blue-600 dark:text-emerald-400" />
+                      <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                     ) : (
                       <Copy className="w-3.5 h-3.5" />
                     )}
@@ -167,7 +167,7 @@ export default function AuditRequest() {
                 </div>
               </div>
               {copiedPhone && (
-                <div className="text-[10px] font-mono text-blue-600 dark:text-emerald-400 font-semibold animate-fade-slide-up">
+                <div className="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-semibold animate-fade-slide-up">
                   ✓ Copied phone number!
                 </div>
               )}

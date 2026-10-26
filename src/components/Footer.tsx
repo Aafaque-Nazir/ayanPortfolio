@@ -23,7 +23,7 @@ export default function Footer() {
               <div className="text-base font-extrabold tracking-tight text-slate-900 dark:text-zinc-50">
                 AYAN AKLEKAR
               </div>
-              <p className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold">
+              <p className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">
                 SEO Specialist &amp; Digital Marketer • Dubai, UAE
               </p>
             </div>
@@ -36,7 +36,7 @@ export default function Footer() {
               <button
                 type="button"
                 onClick={() => scrollTo("contact")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white transition-all cursor-pointer shadow-md shadow-blue-500/20 dark:shadow-none"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-md shadow-blue-500/20 dark:shadow-md dark:shadow-blue-900/30 transition-all cursor-pointer"
               >
                 <span>Get a Free Audit</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Column 2: Navigation Sections (2 cols) */}
           <div className="md:col-span-2 space-y-3 font-mono text-xs">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">
               Navigation
             </div>
             <ul className="space-y-2">
@@ -62,7 +62,7 @@ export default function Footer() {
                   <button
                     type="button"
                     onClick={() => scrollTo(item.id)}
-                    className="text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all cursor-pointer font-medium"
+                    className="text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-0.5 transition-all cursor-pointer font-medium"
                   >
                     {item.label}
                   </button>
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Column 3: Disciplines & Services (3 cols) */}
           <div className="md:col-span-3 space-y-3 font-mono text-xs">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">
               Disciplines
             </div>
             <ul className="space-y-2.5 text-slate-600 dark:text-zinc-400">
@@ -81,9 +81,9 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={() => scrollTo("case-studies")}
-                  className="hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer group"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-0.5 transition-all text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 transition-colors">SEO &amp; Local Maps</span>
+                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">SEO &amp; Local Maps</span>
                   <div className="text-[10px] text-slate-500 dark:text-zinc-400">Google 3-Pack &amp; Search Console</div>
                 </button>
               </li>
@@ -91,9 +91,9 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={() => scrollTo("case-studies")}
-                  className="hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer group"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-0.5 transition-all text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 transition-colors">Social Media</span>
+                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Social Media</span>
                   <div className="text-[10px] text-slate-500 dark:text-zinc-400">Instagram &amp; LinkedIn Branding</div>
                 </button>
               </li>
@@ -101,9 +101,9 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={() => scrollTo("case-studies")}
-                  className="hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer group"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-0.5 transition-all text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 transition-colors">WordPress Websites</span>
+                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">WordPress Websites</span>
                   <div className="text-[10px] text-slate-500 dark:text-zinc-400">Core Web Vitals &amp; WooCommerce</div>
                 </button>
               </li>
@@ -112,7 +112,7 @@ export default function Footer() {
 
           {/* Column 4: Contact & Location (3 cols) */}
           <div className="md:col-span-3 space-y-3 font-mono text-xs">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">
               Direct Contact
             </div>
             <div className="space-y-2">
@@ -120,22 +120,22 @@ export default function Footer() {
                 href="https://wa.me/971566182617?text=Hi%20Ayan,%20I%20would%20like%20to%20discuss%20SEO%20and%20digital%20growth"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white transition-colors group"
+                className="flex items-center gap-2 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
-                <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-emerald-400 shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
                 <span className="font-medium">+971 56 618 2617</span>
               </a>
 
               <a
                 href="mailto:ayanaklekar1@gmail.com"
-                className="flex items-center gap-2 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white transition-colors group truncate"
+                className="flex items-center gap-2 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group truncate"
               >
-                <Mail className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-600 shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-600 dark:text-zinc-400 dark:group-hover:text-blue-400 shrink-0" />
                 <span className="font-medium truncate">ayanaklekar1@gmail.com</span>
               </a>
 
               <div className="flex items-start gap-2 text-slate-500 dark:text-zinc-400 pt-1">
-                <Globe className="w-3.5 h-3.5 text-blue-600/80 dark:text-zinc-400 shrink-0 mt-0.5" />
+                <Globe className="w-3.5 h-3.5 text-blue-600/80 dark:text-blue-400/80 shrink-0 mt-0.5" />
                 <span className="text-[11px] leading-tight">Al Baraha, Deira, Dubai, UAE (GST)</span>
               </div>
 
@@ -145,7 +145,7 @@ export default function Footer() {
                   href="https://linkedin.com/in/ayanaklekar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-700 transition-colors"
+                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-blue-400 dark:hover:bg-blue-950/30 transition-colors"
                   aria-label="LinkedIn"
                   title="LinkedIn"
                 >
@@ -157,7 +157,7 @@ export default function Footer() {
                   href="https://x.com/ayanaklekar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-700 transition-colors"
+                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-blue-400 dark:hover:bg-blue-950/30 transition-colors"
                   aria-label="X (Twitter)"
                   title="X (Twitter)"
                 >
@@ -169,7 +169,7 @@ export default function Footer() {
                   href="https://medium.com/@AyanFreelancer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-700 transition-colors"
+                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-blue-400 dark:hover:bg-blue-950/30 transition-colors"
                   aria-label="Medium"
                   title="Medium"
                 >
@@ -195,7 +195,7 @@ export default function Footer() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="group inline-flex items-center gap-1.5 text-slate-800 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-white transition-colors cursor-pointer font-semibold"
+              className="group inline-flex items-center gap-1.5 text-slate-800 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer font-semibold"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform duration-200" />

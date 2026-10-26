@@ -42,10 +42,10 @@ export default function Header() {
               key={link.id}
               href={link.href}
               onClick={(e) => handleSmoothScroll(e, link.id)}
-              className="relative py-1 text-slate-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 group font-medium"
+              className="relative py-1 text-slate-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 group font-medium"
             >
               <span>{link.label}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-blue-600 dark:bg-zinc-100 transition-all duration-200 ease-out group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-blue-600 dark:bg-blue-500 transition-all duration-200 ease-out group-hover:w-full" />
             </a>
           ))}
 
@@ -56,7 +56,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, "contact")}
-            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 shadow-xs hover:shadow-md hover:shadow-blue-500/20 dark:hover:shadow-none cursor-pointer"
+            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 shadow-sm shadow-blue-500/25 dark:shadow-md dark:shadow-blue-900/30 cursor-pointer"
           >
             <span>Free Audit</span>
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
@@ -85,42 +85,42 @@ export default function Header() {
             <a
               href="#about"
               onClick={(e) => handleSmoothScroll(e, "about")}
-              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
             >
               About
             </a>
             <a
               href="#skills"
               onClick={(e) => handleSmoothScroll(e, "skills")}
-              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
             >
               Skills &amp; Tools
             </a>
             <a
               href="#experience"
               onClick={(e) => handleSmoothScroll(e, "experience")}
-              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
             >
               Experience
             </a>
             <a
               href="#process"
               onClick={(e) => handleSmoothScroll(e, "process")}
-              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
             >
               Process
             </a>
             <a
               href="#case-studies"
               onClick={(e) => handleSmoothScroll(e, "case-studies")}
-              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150"
             >
               Case Studies
             </a>
             <a
               href="#contact"
               onClick={(e) => handleSmoothScroll(e, "contact")}
-              className="group inline-flex items-center justify-center gap-2 py-2.5 rounded-md bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white active:scale-[0.98] transition-all duration-150 shadow-sm shadow-blue-500/20 dark:shadow-none"
+              className="group inline-flex items-center justify-center gap-2 py-2.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold active:scale-[0.98] transition-all duration-150 shadow-sm shadow-blue-500/25 dark:shadow-md dark:shadow-blue-900/30"
             >
               <span>Free Audit</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />

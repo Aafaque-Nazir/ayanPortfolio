@@ -33,7 +33,7 @@ html.dark, html[data-theme="dark"], body.dark, [data-theme="dark"] {
   --border-subtle: #3F3F46;
   --border-dark: #FAFAFA;
   
-  --accent-primary: #FAFAFA;
+  --accent-primary: #3B82F6;
   --accent-emerald: #34D399;
   
   color-scheme: dark;
@@ -75,8 +75,8 @@ html.lenis body {
 }
 
 html.dark ::selection {
-  background-color: #FAFAFA;
-  color: #09090B;
+  background-color: #2563EB;
+  color: #FFFFFF;
 }
 
 /* Minimalist Form Focus */
@@ -88,8 +88,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 html.dark input:focus, html.dark textarea:focus, html.dark select:focus {
-  border-color: #FAFAFA;
-  box-shadow: 0 0 0 1px #FAFAFA;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
 }
 
 /* Range Slider Micro-Interactions */

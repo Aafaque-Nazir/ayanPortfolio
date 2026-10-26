@@ -52,7 +52,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => scrollToSection("contact")}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 hover:bg-blue-700 dark:hover:bg-white text-sm font-semibold active:scale-[0.98] transition-all cursor-pointer shadow-md shadow-blue-500/20 dark:shadow-none group"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold active:scale-[0.98] transition-all cursor-pointer shadow-md shadow-blue-500/25 dark:shadow-lg dark:shadow-blue-900/40 group"
               >
                 <span>Get a Free Audit</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -61,7 +61,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => scrollToSection("case-studies")}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-blue-50/50 dark:hover:bg-zinc-800/80 hover:border-blue-200 dark:hover:border-zinc-700 text-slate-800 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-white text-sm font-semibold active:scale-[0.98] transition-all cursor-pointer shadow-2xs"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-blue-50/50 dark:hover:bg-blue-950/20 hover:border-blue-300 dark:hover:border-blue-500/50 text-slate-800 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 text-sm font-semibold active:scale-[0.98] transition-all cursor-pointer shadow-2xs"
               >
                 <span>Case Studies</span>
                 <ArrowDownRight className="w-4 h-4" />
@@ -76,7 +76,7 @@ export default function Hero() {
                   href={channel.url}
                   target={channel.name === "Email" ? undefined : "_blank"}
                   rel={channel.name === "Email" ? undefined : "noopener noreferrer"}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 hover:bg-blue-50 dark:hover:bg-zinc-800/90 hover:border-blue-200 dark:hover:border-zinc-700 text-slate-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-white transition-all text-xs font-medium active:scale-95 shadow-2xs"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/60 hover:bg-blue-50 dark:hover:bg-blue-950/20 hover:border-blue-300 dark:hover:border-blue-500/50 text-slate-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all text-xs font-medium active:scale-95 shadow-2xs"
                   title={channel.name}
                   aria-label={channel.name}
                 >
@@ -107,7 +107,7 @@ export default function Hero() {
           <button
             type="button"
             onClick={() => scrollToSection("about")}
-            className="w-10 h-10 rounded-full border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white hover:border-blue-300 dark:hover:border-zinc-600 hover:bg-blue-50/50 dark:hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all flex items-center justify-center shadow-2xs cursor-pointer"
+            className="w-10 h-10 rounded-full border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-500/50 hover:bg-blue-50/50 dark:hover:bg-blue-950/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all flex items-center justify-center shadow-2xs cursor-pointer"
             aria-label="Scroll to about"
           >
             <ArrowDown className="w-4 h-4" />

@@ -102,17 +102,17 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-[#0c0c0e] rounded-2xl border border-slate-200/90 dark:border-zinc-800 p-6 sm:p-7 hover:border-blue-400 dark:hover:border-zinc-600 hover:shadow-md hover:shadow-blue-500/5 transition-all duration-200 shadow-2xs"
+              className="bg-white dark:bg-[#0c0c0e] rounded-2xl border border-slate-200/90 dark:border-zinc-800 p-6 sm:p-7 hover:border-blue-400 dark:hover:border-blue-500/50 hover:shadow-md hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 shadow-2xs"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 {/* Left Column: Role, Company, Period */}
                 <div className="lg:col-span-4 space-y-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-zinc-800 border border-blue-200/60 dark:border-zinc-700 flex items-center justify-center shrink-0">
-                      <Briefcase className="w-4 h-4 text-blue-600 dark:text-zinc-300" />
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200/60 dark:border-blue-900/50 flex items-center justify-center shrink-0">
+                      <Briefcase className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
-                      <span className="text-xs font-mono font-bold text-blue-600/80 dark:text-zinc-400 uppercase tracking-wider block">
+                      <span className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider block">
                         {exp.period}
                       </span>
                     </div>
@@ -135,7 +135,7 @@ export default function Experience() {
                     <div className="pt-2 grid grid-cols-3 gap-2 border-t border-slate-100 dark:border-zinc-800/80">
                       {exp.metrics.map((m, mIdx) => (
                         <div key={mIdx} className="space-y-0.5">
-                          <div className="text-base sm:text-lg font-black text-blue-600 dark:text-zinc-50 tracking-tight">
+                          <div className="text-base sm:text-lg font-black text-blue-600 dark:text-blue-400 tracking-tight">
                             {m.value}
                           </div>
                           <div className="text-[10px] font-mono text-slate-500 dark:text-zinc-400 leading-tight">
@@ -149,7 +149,7 @@ export default function Experience() {
 
                 {/* Right Column: Execution Highlights */}
                 <div className="lg:col-span-8 lg:border-l lg:border-slate-100 lg:dark:border-zinc-800/80 lg:pl-6 space-y-2.5">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold block mb-2">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold block mb-2">
                     Key Responsibilities &amp; Outcomes
                   </span>
                   <ul className="space-y-2.5">
@@ -158,7 +158,7 @@ export default function Experience() {
                       const desc = descParts.join(":");
                       return (
                         <li key={hIdx} className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-zinc-600 shrink-0 mt-1.5" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 shrink-0 mt-1.5" />
                           <div>
                             {desc ? (
                               <>
@@ -185,8 +185,8 @@ export default function Experience() {
         <div className="pt-2">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <GraduationCap className="w-4 h-4 text-blue-600 dark:text-zinc-300" />
-              <span className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold">
+              <GraduationCap className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <span className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">
                 Education &amp; Qualifications
               </span>
             </div>
@@ -197,11 +197,11 @@ export default function Experience() {
             {education.map((edu, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50/70 dark:bg-[#0c0c0e] rounded-xl border border-slate-200 dark:border-zinc-800 p-4 sm:p-5 flex flex-col justify-between hover:border-blue-300 dark:hover:border-zinc-700 hover:shadow-2xs transition-all"
+                className="bg-slate-50/70 dark:bg-[#0c0c0e] rounded-xl border border-slate-200 dark:border-zinc-800 p-4 sm:p-5 flex flex-col justify-between hover:border-blue-300 dark:hover:border-blue-500/50 hover:shadow-2xs transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between font-mono text-[11px] text-slate-400 mb-1.5">
-                    <span className="font-bold text-blue-600 dark:text-zinc-100">
+                    <span className="font-bold text-blue-600 dark:text-blue-400">
                       {edu.year}
                     </span>
                     <span>{edu.location}</span>

@@ -172,20 +172,20 @@ export default function SkillsAndTools() {
           {skillPillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="bg-white dark:bg-[#0c0c0e] rounded-2xl border border-slate-200/90 dark:border-zinc-800 p-5 flex flex-col justify-between hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-md hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 shadow-2xs group"
+              className="bg-white dark:bg-[#0c0c0e] rounded-2xl border border-slate-200/90 dark:border-zinc-800 p-5 flex flex-col justify-between hover:border-blue-400 dark:hover:border-blue-500/50 hover:-translate-y-0.5 hover:shadow-md hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 shadow-2xs group"
             >
               <div className="space-y-3">
                 {/* Pillar Header */}
                 <div className="flex items-center justify-between pb-2.5 border-b border-slate-100 dark:border-zinc-800/80 font-mono text-[11px]">
                   <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-zinc-800 border border-blue-200/60 dark:border-zinc-700/80 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200/60 dark:border-blue-900/50 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                       {pillar.icon}
                     </div>
-                    <span className="font-bold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-zinc-100 transition-colors">
+                    <span className="font-bold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {pillar.category}
                     </span>
                   </div>
-                  <span className="text-[10px] text-blue-600/70 dark:text-zinc-400 font-mono font-semibold">{pillar.number}</span>
+                  <span className="text-[10px] text-blue-600/70 dark:text-blue-400/80 font-mono font-semibold">{pillar.number}</span>
                 </div>
 
                 {/* Subtitle */}
@@ -200,7 +200,7 @@ export default function SkillsAndTools() {
                       key={sIdx}
                       className="flex items-start gap-2 text-slate-700 dark:text-zinc-300 text-xs font-normal"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-zinc-600 mt-1 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-1 shrink-0" />
                       <span className="leading-snug">{skill}</span>
                     </li>
                   ))}
@@ -213,7 +213,7 @@ export default function SkillsAndTools() {
         {/* Tools I Use Sub-Block */}
         <div className="pt-2">
           <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold">
+            <span className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">
               Tools &amp; Platforms I Use
             </span>
             <span className="text-[11px] font-mono text-slate-500 dark:text-zinc-400">Daily Workflow</span>
@@ -223,13 +223,13 @@ export default function SkillsAndTools() {
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-xs hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-150 flex items-center gap-3 shadow-2xs group"
+                className="p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] hover:border-blue-400 dark:hover:border-blue-500/50 hover:-translate-y-0.5 hover:shadow-xs hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-150 flex items-center gap-3 shadow-2xs group"
               >
-                <div className="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 dark:group-hover:border-zinc-700 transition-all">
+                <div className="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 dark:group-hover:border-blue-500/40 transition-all">
                   {tool.icon}
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-semibold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-zinc-100 transition-colors truncate">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
                     {tool.name}
                   </div>
                   <div className="text-[10px] font-mono text-slate-500 dark:text-zinc-400 truncate">
