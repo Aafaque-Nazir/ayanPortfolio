@@ -4,17 +4,17 @@
 :root {
   --bg-canvas: #FFFFFF;
   --bg-surface: #FFFFFF;
-  --bg-surface-muted: #F4F4F5;
-  --bg-surface-elevated: #FAFAFA;
+  --bg-surface-muted: #F8FAFC;
+  --bg-surface-elevated: #F0F7FF;
   
-  --ink-primary: #09090B;
-  --ink-secondary: #3F3F46;
-  --ink-muted: #52525B;
+  --ink-primary: #0F172A;
+  --ink-secondary: #334155;
+  --ink-muted: #64748B;
   
-  --border-subtle: #D4D4D8;
-  --border-dark: #09090B;
+  --border-subtle: #E2E8F0;
+  --border-dark: #0F172A;
   
-  --accent-primary: #09090B;
+  --accent-primary: #2563EB;
   --accent-emerald: #059669;
   
   color-scheme: light;
@@ -70,8 +70,8 @@ html.lenis body {
 }
 
 ::selection {
-  background-color: #09090B;
-  color: #FAFAFA;
+  background-color: #2563EB;
+  color: #FFFFFF;
 }
 
 html.dark ::selection {
@@ -82,8 +82,8 @@ html.dark ::selection {
 /* Minimalist Form Focus */
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: #09090B;
-  box-shadow: 0 0 0 1px #09090B;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -121,25 +121,9 @@ input[type="range"]:active::-webkit-slider-thumb {
   animation: fadeSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* 360° Rotating Pure White Border Beam */
-@keyframes spinBorder {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-border {
-  animation: spinBorder 4s linear infinite !important;
-  will-change: transform;
-}
-
-/* Accessibility: Respect Reduced Motion (exempting essential decorative rotating border beams) */
+/* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *:not(.animate-spin-border, .animate-spin-border *),
-  ::before, ::after {
+  *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

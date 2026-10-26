@@ -23,7 +23,7 @@ export default function SkillsAndTools() {
       number: "01",
       category: "SEO & Search",
       subtitle: "Rankings & Google Maps",
-      icon: <Search className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />,
+      icon: <Search className="w-4 h-4 text-blue-600 dark:text-zinc-300" />,
       skills: [
         "Technical SEO & Site Audits",
         "On-Page & Off-Page SEO",
@@ -36,7 +36,7 @@ export default function SkillsAndTools() {
       number: "02",
       category: "Content Strategy",
       subtitle: "Content & Search Optimization",
-      icon: <FileText className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />,
+      icon: <FileText className="w-4 h-4 text-blue-600 dark:text-zinc-300" />,
       skills: [
         "SEO Articles & Blog Posts",
         "Title & Meta Tag Optimization",
@@ -49,7 +49,7 @@ export default function SkillsAndTools() {
       number: "03",
       category: "Social Media",
       subtitle: "Audience & Engagement",
-      icon: <Share2 className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />,
+      icon: <Share2 className="w-4 h-4 text-blue-600 dark:text-zinc-300" />,
       skills: [
         "Social Media Management",
         "Monthly Content Calendars",
@@ -62,7 +62,7 @@ export default function SkillsAndTools() {
       number: "04",
       category: "Web & Analytics",
       subtitle: "Analytics & Setup",
-      icon: <BarChart3 className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />,
+      icon: <BarChart3 className="w-4 h-4 text-blue-600 dark:text-zinc-300" />,
       skills: [
         "WordPress Website Setup",
         "Google Search Console",
@@ -152,20 +152,17 @@ export default function SkillsAndTools() {
   return (
     <section
       id="skills"
-      className="py-12 sm:py-16 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-[#09090B] scroll-mt-14 transition-colors duration-200"
+      className="py-12 sm:py-16 border-b border-slate-200 dark:border-zinc-800 bg-slate-50/60 dark:bg-[#09090B] scroll-mt-14 transition-colors duration-200"
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-zinc-200 dark:border-zinc-800 gap-2">
-          <div className="space-y-1">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">
-              Expertise
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-slate-200 dark:border-zinc-800 gap-2">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-zinc-50">
               Skills &amp; Tools
             </h2>
           </div>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
+          <p className="text-xs text-slate-500 dark:text-zinc-400">
             Core areas of work and everyday tools.
           </p>
         </div>
@@ -175,35 +172,35 @@ export default function SkillsAndTools() {
           {skillPillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="bg-white dark:bg-[#0c0c0e] rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 flex flex-col justify-between hover:border-zinc-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 shadow-2xs group"
+              className="bg-white dark:bg-[#0c0c0e] rounded-2xl border border-slate-200/90 dark:border-zinc-800 p-5 flex flex-col justify-between hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-md hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-200 shadow-2xs group"
             >
               <div className="space-y-3">
                 {/* Pillar Header */}
-                <div className="flex items-center justify-between pb-2.5 border-b border-zinc-100 dark:border-zinc-800/80 font-mono text-[11px]">
+                <div className="flex items-center justify-between pb-2.5 border-b border-slate-100 dark:border-zinc-800/80 font-mono text-[11px]">
                   <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700/80 flex items-center justify-center shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-zinc-800 border border-blue-200/60 dark:border-zinc-700/80 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                       {pillar.icon}
                     </div>
-                    <span className="font-bold text-zinc-950 dark:text-zinc-100">
+                    <span className="font-bold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-zinc-100 transition-colors">
                       {pillar.category}
                     </span>
                   </div>
-                  <span className="text-[10px] text-zinc-400 font-mono">{pillar.number}</span>
+                  <span className="text-[10px] text-blue-600/70 dark:text-zinc-400 font-mono font-semibold">{pillar.number}</span>
                 </div>
 
                 {/* Subtitle */}
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-tight font-mono">
+                <p className="text-xs text-slate-500 dark:text-zinc-400 leading-tight font-mono">
                   {pillar.subtitle}
                 </p>
 
                 {/* Skills Bullet List */}
-                <ul className="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+                <ul className="space-y-2 pt-2 border-t border-slate-100 dark:border-zinc-800/80">
                   {pillar.skills.map((skill, sIdx) => (
                     <li
                       key={sIdx}
-                      className="flex items-start gap-2 text-zinc-700 dark:text-zinc-300 text-xs font-normal"
+                      className="flex items-start gap-2 text-slate-700 dark:text-zinc-300 text-xs font-normal"
                     >
-                      <span className="w-1 h-1 rounded-full bg-zinc-400 dark:bg-zinc-600 mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-zinc-600 mt-1 shrink-0" />
                       <span className="leading-snug">{skill}</span>
                     </li>
                   ))}
@@ -216,26 +213,26 @@ export default function SkillsAndTools() {
         {/* Tools I Use Sub-Block */}
         <div className="pt-2">
           <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">
+            <span className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold">
               Tools &amp; Platforms I Use
             </span>
-            <span className="text-[11px] font-mono text-zinc-400">Daily Workflow</span>
+            <span className="text-[11px] font-mono text-slate-500 dark:text-zinc-400">Daily Workflow</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-3">
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="p-3.5 rounded-xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] hover:border-zinc-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-xs transition-all duration-150 flex items-center gap-3 shadow-2xs group"
+                className="p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-[#0c0c0e] hover:border-blue-400 dark:hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-xs hover:shadow-blue-500/5 dark:hover:shadow-none transition-all duration-150 flex items-center gap-3 shadow-2xs group"
               >
-                <div className="w-8 h-8 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-8 h-8 rounded-lg bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-blue-200 dark:group-hover:border-zinc-700 transition-all">
                   {tool.icon}
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-semibold text-zinc-950 dark:text-zinc-100 truncate">
+                  <div className="text-xs font-semibold text-slate-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-zinc-100 transition-colors truncate">
                     {tool.name}
                   </div>
-                  <div className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 truncate">
+                  <div className="text-[10px] font-mono text-slate-500 dark:text-zinc-400 truncate">
                     {tool.role}
                   </div>
                 </div>

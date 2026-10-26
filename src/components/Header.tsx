@@ -24,13 +24,13 @@ export default function Header() {
             e.preventDefault();
             scrollToSection("top");
           }}
-          className="text-sm md:text-base font-bold tracking-tight text-zinc-950 dark:text-zinc-50 hover:opacity-80 transition-opacity"
+          className="text-sm md:text-base font-bold tracking-tight text-slate-900 dark:text-zinc-50 hover:text-blue-600 dark:hover:opacity-80 transition-colors"
         >
           AYAN AKLEKAR
         </a>
 
         {/* Desktop Navigation Links + Dark Mode Toggle */}
-        <nav className="hidden md:flex items-center gap-5 text-xs font-medium text-zinc-700 dark:text-zinc-200">
+        <nav className="hidden md:flex items-center gap-5 text-xs font-medium text-slate-600 dark:text-zinc-200">
           {[
             { href: "#about", label: "About", id: "about" },
             { href: "#skills", label: "Skills & Tools", id: "skills" },
@@ -42,21 +42,21 @@ export default function Header() {
               key={link.id}
               href={link.href}
               onClick={(e) => handleSmoothScroll(e, link.id)}
-              className="relative py-1 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white transition-colors duration-200 group font-medium"
+              className="relative py-1 text-slate-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-white transition-colors duration-200 group font-medium"
             >
               <span>{link.label}</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-zinc-950 dark:bg-zinc-100 transition-all duration-200 ease-out group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-blue-600 dark:bg-zinc-100 transition-all duration-200 ease-out group-hover:w-full" />
             </a>
           ))}
 
-          <div className="h-4 w-px bg-zinc-300 dark:bg-zinc-700" />
+          <div className="h-4 w-px bg-slate-200 dark:bg-zinc-700" />
 
           <ThemeToggle />
 
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, "contact")}
-            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-zinc-800 dark:hover:bg-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 shadow-xs hover:shadow-md cursor-pointer"
+            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 shadow-xs hover:shadow-md hover:shadow-blue-500/20 dark:hover:shadow-none cursor-pointer"
           >
             <span>Free Audit</span>
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
@@ -70,7 +70,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 rounded-md border border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 active:scale-95 transition-all duration-150 cursor-pointer"
+            className="p-1.5 rounded-md border border-slate-200 dark:border-zinc-700 text-slate-700 dark:text-zinc-200 hover:bg-blue-50 dark:hover:bg-zinc-800 hover:text-blue-600 dark:hover:text-white active:scale-95 transition-all duration-150 cursor-pointer"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -80,47 +80,47 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-zinc-200 dark:border-zinc-700 bg-white/98 dark:bg-[#09090B]/98 backdrop-blur-md px-6 py-5 space-y-3 transition-colors duration-200 animate-fade-slide-up">
-          <div className="flex flex-col space-y-3 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+        <div className="md:hidden border-t border-slate-200 dark:border-zinc-700 bg-white/98 dark:bg-[#09090B]/98 backdrop-blur-md px-6 py-5 space-y-3 transition-colors duration-200 animate-fade-slide-up">
+          <div className="flex flex-col space-y-3 text-sm font-medium text-slate-700 dark:text-zinc-200">
             <a
               href="#about"
               onClick={(e) => handleSmoothScroll(e, "about")}
-              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
             >
               About
             </a>
             <a
               href="#skills"
               onClick={(e) => handleSmoothScroll(e, "skills")}
-              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
             >
               Skills &amp; Tools
             </a>
             <a
               href="#experience"
               onClick={(e) => handleSmoothScroll(e, "experience")}
-              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
             >
               Experience
             </a>
             <a
               href="#process"
               onClick={(e) => handleSmoothScroll(e, "process")}
-              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
             >
               Process
             </a>
             <a
               href="#case-studies"
               onClick={(e) => handleSmoothScroll(e, "case-studies")}
-              className="py-1 hover:text-zinc-950 dark:hover:text-white transition-colors duration-150"
+              className="py-1 hover:text-blue-600 dark:hover:text-white transition-colors duration-150"
             >
               Case Studies
             </a>
             <a
               href="#contact"
               onClick={(e) => handleSmoothScroll(e, "contact")}
-              className="group inline-flex items-center justify-center gap-2 py-2.5 rounded-md bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-zinc-800 dark:hover:bg-white active:scale-[0.98] transition-all duration-150"
+              className="group inline-flex items-center justify-center gap-2 py-2.5 rounded-md bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white active:scale-[0.98] transition-all duration-150 shadow-sm shadow-blue-500/20 dark:shadow-none"
             >
               <span>Free Audit</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />

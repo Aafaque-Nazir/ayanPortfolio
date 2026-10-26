@@ -77,7 +77,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-white dark:bg-[#09090B] text-zinc-950 dark:text-zinc-50 font-[family-name:var(--font-sans)] transition-colors duration-200">
+      <body className="min-h-screen bg-white dark:bg-[#09090B] text-slate-900 dark:text-zinc-50 font-[family-name:var(--font-sans)] transition-colors duration-200">
         {children}
       </body>
     </html>

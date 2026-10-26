@@ -48,14 +48,14 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="relative w-8 h-8 rounded-md border border-zinc-300 dark:border-zinc-700/80 bg-zinc-100/90 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-500 hover:bg-zinc-200/80 dark:hover:bg-zinc-700/80 transition-all duration-200 cursor-pointer select-none inline-flex items-center justify-center shrink-0 shadow-2xs"
+      className="relative w-8 h-8 rounded-md border border-slate-200 dark:border-zinc-700/80 bg-slate-100/90 dark:bg-zinc-800/80 text-slate-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-white hover:border-blue-300 dark:hover:border-zinc-500 hover:bg-blue-50/80 dark:hover:bg-zinc-700/80 transition-all duration-200 cursor-pointer select-none inline-flex items-center justify-center shrink-0 shadow-2xs"
       aria-label="Toggle theme"
       title="Toggle Dark / Light Mode"
     >
       {/* Sun icon is shown in dark mode */}
       <Sun className="w-4 h-4 text-zinc-100 hidden dark:block transition-transform duration-200 hover:rotate-45" />
       {/* Moon icon is shown in light mode */}
-      <Moon className="w-4 h-4 text-zinc-800 block dark:hidden transition-transform duration-200 hover:-rotate-12" />
+      <Moon className="w-4 h-4 text-slate-700 block dark:hidden transition-transform duration-200 hover:-rotate-12" />
     </button>
   );
 }

@@ -14,21 +14,21 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white dark:bg-[#09090B] border-t border-zinc-200 dark:border-zinc-800 py-14 text-zinc-700 dark:text-zinc-300 transition-colors duration-200">
+    <footer className="bg-white dark:bg-[#09090B] border-t border-slate-200 dark:border-zinc-800 py-14 text-slate-700 dark:text-zinc-300 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-5 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-zinc-200 dark:border-zinc-800">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-slate-200 dark:border-zinc-800">
           {/* Column 1: Brand & Bio (4 cols) */}
           <div className="md:col-span-4 space-y-3">
             <div className="space-y-1">
-              <div className="text-base font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50">
+              <div className="text-base font-extrabold tracking-tight text-slate-900 dark:text-zinc-50">
                 AYAN AKLEKAR
               </div>
-              <p className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 font-semibold">
+              <p className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-400 font-bold">
                 SEO Specialist &amp; Digital Marketer • Dubai, UAE
               </p>
             </div>
 
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal">
+            <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed font-normal">
               Helping businesses in Dubai and globally rank on Google Page 1, capture local map customers, and grow engaged social audiences without ad spend.
             </p>
 
@@ -36,7 +36,7 @@ export default function Footer() {
               <button
                 type="button"
                 onClick={() => scrollTo("contact")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-zinc-800 dark:hover:bg-white transition-all cursor-pointer shadow-xs"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-semibold hover:bg-blue-700 dark:hover:bg-white transition-all cursor-pointer shadow-md shadow-blue-500/20 dark:shadow-none"
               >
                 <span>Get a Free Audit</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Column 2: Navigation Sections (2 cols) */}
           <div className="md:col-span-2 space-y-3 font-mono text-xs">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-950 dark:text-zinc-100 font-bold">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold">
               Navigation
             </div>
             <ul className="space-y-2">
@@ -62,7 +62,7 @@ export default function Footer() {
                   <button
                     type="button"
                     onClick={() => scrollTo(item.id)}
-                    className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:translate-x-0.5 transition-all cursor-pointer font-medium"
+                    className="text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all cursor-pointer font-medium"
                   >
                     {item.label}
                   </button>
@@ -73,38 +73,38 @@ export default function Footer() {
 
           {/* Column 3: Disciplines & Services (3 cols) */}
           <div className="md:col-span-3 space-y-3 font-mono text-xs">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-950 dark:text-zinc-100 font-bold">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold">
               Disciplines
             </div>
-            <ul className="space-y-2.5 text-zinc-600 dark:text-zinc-400">
+            <ul className="space-y-2.5 text-slate-600 dark:text-zinc-400">
               <li>
                 <button
                   type="button"
                   onClick={() => scrollTo("case-studies")}
-                  className="hover:text-zinc-950 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer"
+                  className="hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-zinc-900 dark:text-zinc-200">SEO &amp; Local Maps</span>
-                  <div className="text-[10px] text-zinc-500">Google 3-Pack &amp; Search Console</div>
+                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 transition-colors">SEO &amp; Local Maps</span>
+                  <div className="text-[10px] text-slate-500 dark:text-zinc-400">Google 3-Pack &amp; Search Console</div>
                 </button>
               </li>
               <li>
                 <button
                   type="button"
                   onClick={() => scrollTo("case-studies")}
-                  className="hover:text-zinc-950 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer"
+                  className="hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-zinc-900 dark:text-zinc-200">Social Media</span>
-                  <div className="text-[10px] text-zinc-500">Instagram &amp; LinkedIn Branding</div>
+                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 transition-colors">Social Media</span>
+                  <div className="text-[10px] text-slate-500 dark:text-zinc-400">Instagram &amp; LinkedIn Branding</div>
                 </button>
               </li>
               <li>
                 <button
                   type="button"
                   onClick={() => scrollTo("case-studies")}
-                  className="hover:text-zinc-950 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer"
+                  className="hover:text-blue-600 dark:hover:text-white hover:translate-x-0.5 transition-all text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-zinc-900 dark:text-zinc-200">WordPress Websites</span>
-                  <div className="text-[10px] text-zinc-500">Core Web Vitals &amp; WooCommerce</div>
+                  <span className="font-semibold text-slate-900 dark:text-zinc-200 group-hover:text-blue-600 transition-colors">WordPress Websites</span>
+                  <div className="text-[10px] text-slate-500 dark:text-zinc-400">Core Web Vitals &amp; WooCommerce</div>
                 </button>
               </li>
             </ul>
@@ -112,7 +112,7 @@ export default function Footer() {
 
           {/* Column 4: Contact & Location (3 cols) */}
           <div className="md:col-span-3 space-y-3 font-mono text-xs">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-950 dark:text-zinc-100 font-bold">
+            <div className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-zinc-100 font-bold">
               Direct Contact
             </div>
             <div className="space-y-2">
@@ -120,32 +120,32 @@ export default function Footer() {
                 href="https://wa.me/971566182617?text=Hi%20Ayan,%20I%20would%20like%20to%20discuss%20SEO%20and%20digital%20growth"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors group"
+                className="flex items-center gap-2 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white transition-colors group"
               >
-                <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-emerald-400 shrink-0" />
                 <span className="font-medium">+971 56 618 2617</span>
               </a>
 
               <a
                 href="mailto:ayanaklekar1@gmail.com"
-                className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors group truncate"
+                className="flex items-center gap-2 text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-white transition-colors group truncate"
               >
-                <Mail className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-600 shrink-0" />
                 <span className="font-medium truncate">ayanaklekar1@gmail.com</span>
               </a>
 
-              <div className="flex items-start gap-2 text-zinc-500 dark:text-zinc-400 pt-1">
-                <Globe className="w-3.5 h-3.5 text-zinc-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2 text-slate-500 dark:text-zinc-400 pt-1">
+                <Globe className="w-3.5 h-3.5 text-blue-600/80 dark:text-zinc-400 shrink-0 mt-0.5" />
                 <span className="text-[11px] leading-tight">Al Baraha, Deira, Dubai, UAE (GST)</span>
               </div>
 
               {/* Social Channels Strip */}
-              <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center gap-2.5">
+              <div className="pt-3 border-t border-slate-100 dark:border-zinc-800/80 flex items-center gap-2.5">
                 <a
                   href="https://linkedin.com/in/ayanaklekar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-700 transition-colors"
                   aria-label="LinkedIn"
                   title="LinkedIn"
                 >
@@ -157,7 +157,7 @@ export default function Footer() {
                   href="https://x.com/ayanaklekar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-700 transition-colors"
                   aria-label="X (Twitter)"
                   title="X (Twitter)"
                 >
@@ -169,7 +169,7 @@ export default function Footer() {
                   href="https://medium.com/@AyanFreelancer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                  className="p-1.5 rounded-md bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-700 transition-colors"
                   aria-label="Medium"
                   title="Medium"
                 >
@@ -183,19 +183,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-zinc-500 dark:text-zinc-400">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-slate-500 dark:text-zinc-400">
           <div>
             © 2026 Ayan Aklekar. All rights reserved.
           </div>
 
           <div className="flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
             <span>Al Baraha, Deira, Dubai (UAE)</span>
-            <span className="text-zinc-400 dark:text-zinc-600">•</span>
+            <span className="text-slate-300 dark:text-zinc-600">•</span>
 
             <button
               type="button"
               onClick={scrollToTop}
-              className="group inline-flex items-center gap-1.5 text-zinc-800 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white transition-colors cursor-pointer font-semibold"
+              className="group inline-flex items-center gap-1.5 text-slate-800 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-white transition-colors cursor-pointer font-semibold"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
